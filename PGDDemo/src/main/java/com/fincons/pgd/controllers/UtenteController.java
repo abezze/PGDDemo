@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.fincons.pgd.dto.inputs.UtenteReq;
-import com.fincons.pgd.models.services.implementations.IUtenteServices;
+import com.fincons.pgd.models.services.interfaces.IUtenteServices;
 import com.fincons.pgd.response.Resp;
 
 import lombok.RequiredArgsConstructor;

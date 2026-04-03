@@ -1,10 +1,10 @@
-package com.fincons.pgd.services.interfaces;
+package com.fincons.pgd.services.implementations;
 
 import org.springframework.stereotype.Service;
 
 import com.fincons.pgd.dto.inputs.UtenteReq;
 import com.fincons.pgd.models.Utente;
-import com.fincons.pgd.models.services.implementations.IUtenteServices;
+import com.fincons.pgd.models.services.interfaces.IUtenteServices;
 import com.fincons.pgd.repositories.IUtenteRepository;
 
 import lombok.RequiredArgsConstructor;

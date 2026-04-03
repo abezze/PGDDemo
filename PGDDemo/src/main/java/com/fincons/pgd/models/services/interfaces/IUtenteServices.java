@@ -1,4 +1,4 @@
-package com.fincons.pgd.models.services.implementations;
+package com.fincons.pgd.models.services.interfaces;
 
 import com.fincons.pgd.dto.inputs.UtenteReq;
 
