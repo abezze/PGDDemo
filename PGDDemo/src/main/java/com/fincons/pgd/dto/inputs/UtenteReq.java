@@ -14,6 +14,8 @@ public class UtenteReq {
 	private String nome;
     private String cognome;
     private String codiceFiscale;
-    private String emailEmailCertificata;
+    private String indirizzoEmail;
+    private Boolean flagEmailCertificata;
+    private Boolean flagAccettazioneProxy;
 
 }

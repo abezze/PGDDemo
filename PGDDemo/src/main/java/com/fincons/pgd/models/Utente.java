@@ -26,7 +26,9 @@ public class Utente {
 	private String nome;
     private String cognome;
     private String codiceFiscale;
-    private String emailEmailCertificata;
+    private String indirizzoEmail;
+    private Boolean flagEmailCertificata;
+    private Boolean flagAccettazioneProxy;
 
     @OneToMany(mappedBy = "utente")
     private Set<AssociativaUtenteProfilo> profili;
