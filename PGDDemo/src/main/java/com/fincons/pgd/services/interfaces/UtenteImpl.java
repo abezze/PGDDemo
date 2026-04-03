@@ -15,9 +15,9 @@ import lombok.extern.slf4j.Slf4j;
 public class UtenteImpl implements IUtenteServices {
 
 	public void create(UtenteReq req) {
-		Utente creatore = new Utente();
+		Utente utente = new Utente();
 		
-		creatore.setCognome("");
+		utente.setCognome("");
 		
 	}
 }
