@@ -1,0 +1,1219 @@
+2026-04-03T10:18:48.948+02:00  INFO 15572 --- [PGDDemo] [restartedMain] com.fincons.pgd.PgdDemoApplication       : Starting PgdDemoApplication using Java 25.0.2 with PID 15572 (C:\Software\Fincons\PGDDemo\PGDDemo\target\classes started by Betacom in C:\Software\Fincons\PGDDemo\PGDDemo)
+2026-04-03T10:18:48.953+02:00  INFO 15572 --- [PGDDemo] [restartedMain] com.fincons.pgd.PgdDemoApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-04-03T10:18:48.996+02:00  INFO 15572 --- [PGDDemo] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-04-03T10:18:48.997+02:00  INFO 15572 --- [PGDDemo] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-04-03T10:18:49.711+02:00  INFO 15572 --- [PGDDemo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-03T10:18:49.732+02:00  INFO 15572 --- [PGDDemo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 0 JPA repository interfaces.
+2026-04-03T10:18:50.100+02:00  INFO 15572 --- [PGDDemo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9070 (http)
+2026-04-03T10:18:50.114+02:00  INFO 15572 --- [PGDDemo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-03T10:18:50.114+02:00  INFO 15572 --- [PGDDemo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-04-03T10:18:50.168+02:00  INFO 15572 --- [PGDDemo] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1170 ms
+2026-04-03T10:18:50.311+02:00  INFO 15572 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-04-03T10:18:50.565+02:00  INFO 15572 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7308c698
+2026-04-03T10:18:50.566+02:00  INFO 15572 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-04-03T10:18:50.591+02:00  INFO 15572 --- [PGDDemo] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-03T10:18:50.647+02:00  INFO 15572 --- [PGDDemo] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.7.Final
+2026-04-03T10:18:51.072+02:00  INFO 15572 --- [PGDDemo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-03T10:18:51.304+02:00  INFO 15572 --- [PGDDemo] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/PGDDemo]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.1
+	Default catalog/schema: PGDDemo/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-03T10:18:51.489+02:00 ERROR 15572 --- [PGDDemo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: Association 'com.fincons.pgd.models.Appuntamento.storicoStati' targets the type 'com.fincons.pgd.models.StoricoStatoAppuntamento' which is not an '@Entity' type
+2026-04-03T10:18:51.489+02:00  WARN 15572 --- [PGDDemo] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Association 'com.fincons.pgd.models.Appuntamento.storicoStati' targets the type 'com.fincons.pgd.models.StoricoStatoAppuntamento' which is not an '@Entity' type
+2026-04-03T10:18:51.491+02:00  INFO 15572 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-04-03T10:18:51.496+02:00  INFO 15572 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-04-03T10:18:51.501+02:00  INFO 15572 --- [PGDDemo] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-04-03T10:18:51.509+02:00  INFO 15572 --- [PGDDemo] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-04-03T10:18:51.521+02:00 ERROR 15572 --- [PGDDemo] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Association 'com.fincons.pgd.models.Appuntamento.storicoStati' targets the type 'com.fincons.pgd.models.StoricoStatoAppuntamento' which is not an '@Entity' type
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1817) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:977) ~[spring-context-7.0.6.jar:7.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-7.0.6.jar:7.0.6]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.0.5.jar:4.0.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.0.5.jar:4.0.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.0.5.jar:4.0.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.0.5.jar:4.0.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.0.5.jar:4.0.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.0.5.jar:4.0.5]
+	at com.fincons.pgd.PgdDemoApplication.main(PgdDemoApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52) ~[spring-boot-devtools-4.0.5.jar:4.0.5]
+Caused by: org.hibernate.AnnotationException: Association 'com.fincons.pgd.models.Appuntamento.storicoStati' targets the type 'com.fincons.pgd.models.StoricoStatoAppuntamento' which is not an '@Entity' type
+	at org.hibernate.boot.model.internal.CollectionBinder.detectManyToManyProblems(CollectionBinder.java:2480) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.boot.model.internal.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:2054) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.boot.model.internal.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:1496) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.boot.model.internal.CollectionBinder$1.secondPass(CollectionBinder.java:1480) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.boot.model.internal.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:39) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1771) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1737) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.coordinateProcessors(MetadataBuildingProcess.java:357) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:201) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1392) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.populateSessionFactoryBuilder(EntityManagerFactoryBuilderImpl.java:1472) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1454) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:93) ~[spring-orm-7.0.6.jar:7.0.6]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:443) ~[spring-orm-7.0.6.jar:7.0.6]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:436) ~[spring-orm-7.0.6.jar:7.0.6]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:411) ~[spring-orm-7.0.6.jar:7.0.6]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:419) ~[spring-orm-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813) ~[spring-beans-7.0.6.jar:7.0.6]
+	... 18 common frames omitted
+
+2026-04-03T10:20:29.580+02:00  INFO 25520 --- [PGDDemo] [restartedMain] com.fincons.pgd.PgdDemoApplication       : Starting PgdDemoApplication using Java 25.0.2 with PID 25520 (C:\Software\Fincons\PGDDemo\PGDDemo\target\classes started by Betacom in C:\Software\Fincons\PGDDemo\PGDDemo)
+2026-04-03T10:20:29.582+02:00  INFO 25520 --- [PGDDemo] [restartedMain] com.fincons.pgd.PgdDemoApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-04-03T10:20:29.618+02:00  INFO 25520 --- [PGDDemo] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-04-03T10:20:29.619+02:00  INFO 25520 --- [PGDDemo] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-04-03T10:20:30.130+02:00  INFO 25520 --- [PGDDemo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-03T10:20:30.148+02:00  INFO 25520 --- [PGDDemo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 JPA repository interfaces.
+2026-04-03T10:20:30.457+02:00  INFO 25520 --- [PGDDemo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9070 (http)
+2026-04-03T10:20:30.467+02:00  INFO 25520 --- [PGDDemo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-03T10:20:30.468+02:00  INFO 25520 --- [PGDDemo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-04-03T10:20:30.518+02:00  INFO 25520 --- [PGDDemo] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 899 ms
+2026-04-03T10:20:30.617+02:00  INFO 25520 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-04-03T10:20:30.857+02:00  INFO 25520 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4a458cd9
+2026-04-03T10:20:30.858+02:00  INFO 25520 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-04-03T10:20:30.881+02:00  INFO 25520 --- [PGDDemo] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-03T10:20:30.917+02:00  INFO 25520 --- [PGDDemo] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.7.Final
+2026-04-03T10:20:31.241+02:00  INFO 25520 --- [PGDDemo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-03T10:20:31.316+02:00  INFO 25520 --- [PGDDemo] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/PGDDemo]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.1
+	Default catalog/schema: PGDDemo/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-03T10:20:31.454+02:00 ERROR 25520 --- [PGDDemo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: Collection 'com.fincons.pgd.models.Appuntamento.storicoStati' is 'mappedBy' a property named 'appuntamento' which does not exist in the target entity 'com.fincons.pgd.models.StoricoStatoAppuntamento'
+2026-04-03T10:20:31.455+02:00  WARN 25520 --- [PGDDemo] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Collection 'com.fincons.pgd.models.Appuntamento.storicoStati' is 'mappedBy' a property named 'appuntamento' which does not exist in the target entity 'com.fincons.pgd.models.StoricoStatoAppuntamento'
+2026-04-03T10:20:31.457+02:00  INFO 25520 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-04-03T10:20:31.609+02:00  INFO 25520 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-04-03T10:20:31.617+02:00  INFO 25520 --- [PGDDemo] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-04-03T10:20:31.627+02:00  INFO 25520 --- [PGDDemo] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-04-03T10:20:31.637+02:00 ERROR 25520 --- [PGDDemo] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Collection 'com.fincons.pgd.models.Appuntamento.storicoStati' is 'mappedBy' a property named 'appuntamento' which does not exist in the target entity 'com.fincons.pgd.models.StoricoStatoAppuntamento'
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1817) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:977) ~[spring-context-7.0.6.jar:7.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-7.0.6.jar:7.0.6]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.0.5.jar:4.0.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.0.5.jar:4.0.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.0.5.jar:4.0.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.0.5.jar:4.0.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.0.5.jar:4.0.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.0.5.jar:4.0.5]
+	at com.fincons.pgd.PgdDemoApplication.main(PgdDemoApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52) ~[spring-boot-devtools-4.0.5.jar:4.0.5]
+Caused by: org.hibernate.AnnotationException: Collection 'com.fincons.pgd.models.Appuntamento.storicoStati' is 'mappedBy' a property named 'appuntamento' which does not exist in the target entity 'com.fincons.pgd.models.StoricoStatoAppuntamento'
+	at org.hibernate.boot.model.internal.CollectionBinder.getMappedByProperty(CollectionBinder.java:1523) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.boot.model.internal.CollectionBinder.isReversePropertyInJoin(CollectionBinder.java:1506) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.boot.model.internal.CollectionBinder.noAssociationTable(CollectionBinder.java:1531) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.boot.model.internal.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:1489) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.boot.model.internal.CollectionBinder$1.secondPass(CollectionBinder.java:1480) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.boot.model.internal.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:39) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1771) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1737) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.coordinateProcessors(MetadataBuildingProcess.java:357) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:201) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1392) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.populateSessionFactoryBuilder(EntityManagerFactoryBuilderImpl.java:1472) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1454) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:93) ~[spring-orm-7.0.6.jar:7.0.6]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:443) ~[spring-orm-7.0.6.jar:7.0.6]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:436) ~[spring-orm-7.0.6.jar:7.0.6]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:411) ~[spring-orm-7.0.6.jar:7.0.6]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:419) ~[spring-orm-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813) ~[spring-beans-7.0.6.jar:7.0.6]
+	... 18 common frames omitted
+
+2026-04-03T10:23:23.808+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.fincons.pgd.PgdDemoApplication       : Starting PgdDemoApplication using Java 25.0.2 with PID 29792 (C:\Software\Fincons\PGDDemo\PGDDemo\target\classes started by Betacom in C:\Software\Fincons\PGDDemo\PGDDemo)
+2026-04-03T10:23:23.811+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.fincons.pgd.PgdDemoApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-04-03T10:23:23.857+02:00  INFO 29792 --- [PGDDemo] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-04-03T10:23:23.858+02:00  INFO 29792 --- [PGDDemo] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-04-03T10:23:24.383+02:00  INFO 29792 --- [PGDDemo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-03T10:23:24.404+02:00  INFO 29792 --- [PGDDemo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 0 JPA repository interfaces.
+2026-04-03T10:23:24.715+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9070 (http)
+2026-04-03T10:23:24.726+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-03T10:23:24.727+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-04-03T10:23:24.770+02:00  INFO 29792 --- [PGDDemo] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 912 ms
+2026-04-03T10:23:24.882+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-04-03T10:23:25.095+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1b88aee0
+2026-04-03T10:23:25.096+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-04-03T10:23:25.118+02:00  INFO 29792 --- [PGDDemo] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-03T10:23:25.149+02:00  INFO 29792 --- [PGDDemo] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.7.Final
+2026-04-03T10:23:25.479+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-03T10:23:25.550+02:00  INFO 29792 --- [PGDDemo] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/PGDDemo]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.1
+	Default catalog/schema: PGDDemo/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-03T10:23:26.447+02:00  INFO 29792 --- [PGDDemo] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-03T10:23:26.482+02:00  INFO 29792 --- [PGDDemo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-03T10:23:26.581+02:00  WARN 29792 --- [PGDDemo] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-03T10:23:26.941+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 9070 (http) with context path '/'
+2026-04-03T10:23:26.947+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.fincons.pgd.PgdDemoApplication       : Started PgdDemoApplication in 3.425 seconds (process running for 4.043)
+2026-04-03T10:23:26.950+02:00  WARN 29792 --- [PGDDemo] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-04-03T10:23:26.951+02:00  WARN 29792 --- [PGDDemo] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-04-03T10:30:50.094+02:00  INFO 29792 --- [PGDDemo] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 6 class path changes (1 addition, 1 deletion, 4 modifications)
+2026-04-03T10:30:50.099+02:00  INFO 29792 --- [PGDDemo] [Thread-1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-03T10:30:50.106+02:00  INFO 29792 --- [PGDDemo] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-04-03T10:30:50.110+02:00  INFO 29792 --- [PGDDemo] [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-03T10:30:50.113+02:00  INFO 29792 --- [PGDDemo] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-04-03T10:30:50.122+02:00  INFO 29792 --- [PGDDemo] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-04-03T10:30:50.195+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.fincons.pgd.PgdDemoApplication       : Starting PgdDemoApplication using Java 25.0.2 with PID 29792 (C:\Software\Fincons\PGDDemo\PGDDemo\target\classes started by Betacom in C:\Software\Fincons\PGDDemo\PGDDemo)
+2026-04-03T10:30:50.195+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.fincons.pgd.PgdDemoApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-04-03T10:30:50.335+02:00  INFO 29792 --- [PGDDemo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-03T10:30:50.340+02:00  INFO 29792 --- [PGDDemo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2026-04-03T10:30:50.403+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9070 (http)
+2026-04-03T10:30:50.404+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-03T10:30:50.404+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-04-03T10:30:50.421+02:00  INFO 29792 --- [PGDDemo] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 224 ms
+2026-04-03T10:30:50.447+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-04-03T10:30:50.574+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@60b285b2
+2026-04-03T10:30:50.574+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-04-03T10:30:50.575+02:00  INFO 29792 --- [PGDDemo] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-03T10:30:50.613+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-03T10:30:50.633+02:00  INFO 29792 --- [PGDDemo] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/PGDDemo]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.1
+	Default catalog/schema: PGDDemo/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-03T10:30:50.734+02:00  INFO 29792 --- [PGDDemo] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-03T10:30:50.740+02:00  INFO 29792 --- [PGDDemo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-03T10:30:50.779+02:00  WARN 29792 --- [PGDDemo] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-03T10:30:50.885+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 9070 (http) with context path '/'
+2026-04-03T10:30:50.889+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.fincons.pgd.PgdDemoApplication       : Started PgdDemoApplication in 0.717 seconds (process running for 447.985)
+2026-04-03T10:30:50.890+02:00  WARN 29792 --- [PGDDemo] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-04-03T10:30:50.891+02:00  WARN 29792 --- [PGDDemo] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-04-03T10:30:50.893+02:00  INFO 29792 --- [PGDDemo] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-04-03T10:31:08.415+02:00  INFO 29792 --- [PGDDemo] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 5 class path changes (1 addition, 1 deletion, 3 modifications)
+2026-04-03T10:31:08.418+02:00  INFO 29792 --- [PGDDemo] [Thread-5] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-03T10:31:08.428+02:00  INFO 29792 --- [PGDDemo] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-04-03T10:31:08.431+02:00  INFO 29792 --- [PGDDemo] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-03T10:31:08.432+02:00  INFO 29792 --- [PGDDemo] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2026-04-03T10:31:08.435+02:00  INFO 29792 --- [PGDDemo] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2026-04-03T10:31:08.500+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.fincons.pgd.PgdDemoApplication       : Starting PgdDemoApplication using Java 25.0.2 with PID 29792 (C:\Software\Fincons\PGDDemo\PGDDemo\target\classes started by Betacom in C:\Software\Fincons\PGDDemo\PGDDemo)
+2026-04-03T10:31:08.501+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.fincons.pgd.PgdDemoApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-04-03T10:31:08.619+02:00  INFO 29792 --- [PGDDemo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-03T10:31:08.622+02:00  INFO 29792 --- [PGDDemo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+2026-04-03T10:31:08.673+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9070 (http)
+2026-04-03T10:31:08.673+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-03T10:31:08.674+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-04-03T10:31:08.691+02:00  INFO 29792 --- [PGDDemo] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 189 ms
+2026-04-03T10:31:08.710+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2026-04-03T10:31:08.850+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection org.postgresql.jdbc.PgConnection@20d3fb7d
+2026-04-03T10:31:08.850+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2026-04-03T10:31:08.851+02:00  INFO 29792 --- [PGDDemo] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-03T10:31:08.873+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-03T10:31:08.891+02:00  INFO 29792 --- [PGDDemo] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/PGDDemo]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.1
+	Default catalog/schema: PGDDemo/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-03T10:31:08.990+02:00  INFO 29792 --- [PGDDemo] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-03T10:31:08.999+02:00  INFO 29792 --- [PGDDemo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-03T10:31:09.021+02:00  WARN 29792 --- [PGDDemo] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-03T10:31:09.089+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 9070 (http) with context path '/'
+2026-04-03T10:31:09.091+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.fincons.pgd.PgdDemoApplication       : Started PgdDemoApplication in 0.611 seconds (process running for 466.187)
+2026-04-03T10:31:09.092+02:00  WARN 29792 --- [PGDDemo] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-04-03T10:31:09.092+02:00  WARN 29792 --- [PGDDemo] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-04-03T10:31:09.092+02:00  INFO 29792 --- [PGDDemo] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-04-03T10:36:32.291+02:00  INFO 29792 --- [PGDDemo] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-04-03T10:36:32.294+02:00  INFO 29792 --- [PGDDemo] [Thread-9] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-03T10:36:32.302+02:00  INFO 29792 --- [PGDDemo] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-04-03T10:36:32.305+02:00  INFO 29792 --- [PGDDemo] [Thread-9] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-03T10:36:32.306+02:00  INFO 29792 --- [PGDDemo] [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2026-04-03T10:36:32.311+02:00  INFO 29792 --- [PGDDemo] [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2026-04-03T10:36:32.376+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.fincons.pgd.PgdDemoApplication       : Starting PgdDemoApplication using Java 25.0.2 with PID 29792 (C:\Software\Fincons\PGDDemo\PGDDemo\target\classes started by Betacom in C:\Software\Fincons\PGDDemo\PGDDemo)
+2026-04-03T10:36:32.376+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.fincons.pgd.PgdDemoApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-04-03T10:36:32.497+02:00  INFO 29792 --- [PGDDemo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-03T10:36:32.502+02:00  INFO 29792 --- [PGDDemo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2026-04-03T10:36:32.557+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9070 (http)
+2026-04-03T10:36:32.559+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-03T10:36:32.559+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-04-03T10:36:32.574+02:00  INFO 29792 --- [PGDDemo] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 196 ms
+2026-04-03T10:36:32.596+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2026-04-03T10:36:32.741+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection org.postgresql.jdbc.PgConnection@6c156ce9
+2026-04-03T10:36:32.742+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2026-04-03T10:36:32.743+02:00  INFO 29792 --- [PGDDemo] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-03T10:36:32.778+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-03T10:36:32.795+02:00  INFO 29792 --- [PGDDemo] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/PGDDemo]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.1
+	Default catalog/schema: PGDDemo/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-03T10:36:32.883+02:00  INFO 29792 --- [PGDDemo] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-03T10:36:32.891+02:00  INFO 29792 --- [PGDDemo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-03T10:36:32.919+02:00  WARN 29792 --- [PGDDemo] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-03T10:36:33.016+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 9070 (http) with context path '/'
+2026-04-03T10:36:33.018+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.fincons.pgd.PgdDemoApplication       : Started PgdDemoApplication in 0.666 seconds (process running for 790.114)
+2026-04-03T10:36:33.019+02:00  WARN 29792 --- [PGDDemo] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-04-03T10:36:33.019+02:00  WARN 29792 --- [PGDDemo] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-04-03T10:36:33.020+02:00  INFO 29792 --- [PGDDemo] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-04-03T10:39:56.461+02:00  INFO 29792 --- [PGDDemo] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-04-03T10:39:56.463+02:00  INFO 29792 --- [PGDDemo] [Thread-13] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-03T10:39:56.472+02:00  INFO 29792 --- [PGDDemo] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-04-03T10:39:56.476+02:00  INFO 29792 --- [PGDDemo] [Thread-13] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-03T10:39:56.477+02:00  INFO 29792 --- [PGDDemo] [Thread-13] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2026-04-03T10:39:56.480+02:00  INFO 29792 --- [PGDDemo] [Thread-13] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2026-04-03T10:39:56.547+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.fincons.pgd.PgdDemoApplication       : Starting PgdDemoApplication using Java 25.0.2 with PID 29792 (C:\Software\Fincons\PGDDemo\PGDDemo\target\classes started by Betacom in C:\Software\Fincons\PGDDemo\PGDDemo)
+2026-04-03T10:39:56.548+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.fincons.pgd.PgdDemoApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-04-03T10:39:56.661+02:00  INFO 29792 --- [PGDDemo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-03T10:39:56.666+02:00  INFO 29792 --- [PGDDemo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2026-04-03T10:39:56.710+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9070 (http)
+2026-04-03T10:39:56.711+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-03T10:39:56.711+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-04-03T10:39:56.725+02:00  INFO 29792 --- [PGDDemo] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 176 ms
+2026-04-03T10:39:56.744+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2026-04-03T10:39:56.880+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection org.postgresql.jdbc.PgConnection@6c15dd4e
+2026-04-03T10:39:56.880+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2026-04-03T10:39:56.881+02:00  INFO 29792 --- [PGDDemo] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-03T10:39:56.906+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-03T10:39:56.929+02:00  INFO 29792 --- [PGDDemo] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/PGDDemo]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.1
+	Default catalog/schema: PGDDemo/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-03T10:39:56.999+02:00 ERROR 29792 --- [PGDDemo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: Unable to build Hibernate SessionFactory  [persistence unit: default] ; nested exception is org.hibernate.InstantiationException: Could not instantiate entity 'com.fincons.pgd.models.Profilo' due to: null
+2026-04-03T10:39:57.000+02:00  WARN 29792 --- [PGDDemo] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Unable to build Hibernate SessionFactory  [persistence unit: default] ; nested exception is org.hibernate.InstantiationException: Could not instantiate entity 'com.fincons.pgd.models.Profilo' due to: null
+2026-04-03T10:39:57.000+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2026-04-03T10:39:57.153+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2026-04-03T10:39:57.153+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-04-03T10:39:57.159+02:00  INFO 29792 --- [PGDDemo] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-04-03T10:39:57.170+02:00 ERROR 29792 --- [PGDDemo] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Unable to build Hibernate SessionFactory  [persistence unit: default] ; nested exception is org.hibernate.InstantiationException: Could not instantiate entity 'com.fincons.pgd.models.Profilo' due to: null
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1817) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:977) ~[spring-context-7.0.6.jar:7.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-7.0.6.jar:7.0.6]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.0.5.jar:4.0.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.0.5.jar:4.0.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.0.5.jar:4.0.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.0.5.jar:4.0.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.0.5.jar:4.0.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.0.5.jar:4.0.5]
+	at com.fincons.pgd.PgdDemoApplication.main(PgdDemoApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52) ~[spring-boot-devtools-4.0.5.jar:4.0.5]
+Caused by: jakarta.persistence.PersistenceException: Unable to build Hibernate SessionFactory  [persistence unit: default] ; nested exception is org.hibernate.InstantiationException: Could not instantiate entity 'com.fincons.pgd.models.Profilo' due to: null
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:448) ~[spring-orm-7.0.6.jar:7.0.6]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:411) ~[spring-orm-7.0.6.jar:7.0.6]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:419) ~[spring-orm-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813) ~[spring-beans-7.0.6.jar:7.0.6]
+	... 18 common frames omitted
+Caused by: org.hibernate.InstantiationException: Could not instantiate entity 'com.fincons.pgd.models.Profilo' due to: null
+	at org.hibernate.metamodel.internal.EntityInstantiatorPojoStandard.instantiate(EntityInstantiatorPojoStandard.java:101) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.engine.internal.UnsavedValueFactory.inferUnsavedIdentifierValue(UnsavedValueFactory.java:54) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.engine.internal.UnsavedValueFactory.getUnsavedIdentifierValue(UnsavedValueFactory.java:39) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.metamodel.mapping.internal.BasicEntityIdentifierMappingImpl.<init>(BasicEntityIdentifierMappingImpl.java:148) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.generateIdentifierMapping(AbstractEntityPersister.java:5173) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.lambda$prepareMappingModel$0(AbstractEntityPersister.java:4821) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.metamodel.mapping.internal.MappingModelCreationProcess.processSubPart(MappingModelCreationProcess.java:170) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.prepareMappingModel(AbstractEntityPersister.java:4820) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.initializeSpecialAttributeMappings(AbstractEntityPersister.java:4682) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.prepareMappings(AbstractEntityPersister.java:4663) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.prepareMappingModel(AbstractEntityPersister.java:4631) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.metamodel.mapping.internal.MappingModelCreationProcess.execute(MappingModelCreationProcess.java:88) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.metamodel.mapping.internal.MappingModelCreationProcess.process(MappingModelCreationProcess.java:43) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.metamodel.model.domain.internal.MappingMetamodelImpl.finishInitialization(MappingMetamodelImpl.java:167) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:283) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.internal.SessionFactoryRegistry.instantiateSessionFactory(SessionFactoryRegistry.java:64) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:437) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1456) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:93) ~[spring-orm-7.0.6.jar:7.0.6]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:443) ~[spring-orm-7.0.6.jar:7.0.6]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:436) ~[spring-orm-7.0.6.jar:7.0.6]
+	... 22 common frames omitted
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:74) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483) ~[na:na]
+	at org.hibernate.metamodel.internal.EntityInstantiatorPojoStandard.instantiate(EntityInstantiatorPojoStandard.java:98) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	... 42 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	Column cannot be resolved to a type
+	Column cannot be resolved to a type
+	Column cannot be resolved to a type
+
+	at com.fincons.pgd.models.Profilo.<init>(Profilo.java:23) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62) ~[na:na]
+	... 45 common frames omitted
+
+2026-04-03T10:40:08.715+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.fincons.pgd.PgdDemoApplication       : Starting PgdDemoApplication using Java 25.0.2 with PID 29792 (C:\Software\Fincons\PGDDemo\PGDDemo\target\classes started by Betacom in C:\Software\Fincons\PGDDemo\PGDDemo)
+2026-04-03T10:40:08.716+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.fincons.pgd.PgdDemoApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-04-03T10:40:08.839+02:00  INFO 29792 --- [PGDDemo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-03T10:40:08.843+02:00  INFO 29792 --- [PGDDemo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2026-04-03T10:40:08.882+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9070 (http)
+2026-04-03T10:40:08.883+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-03T10:40:08.883+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-04-03T10:40:08.898+02:00  INFO 29792 --- [PGDDemo] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 181 ms
+2026-04-03T10:40:08.925+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2026-04-03T10:40:09.074+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-6 - Added connection org.postgresql.jdbc.PgConnection@7cf44e0b
+2026-04-03T10:40:09.075+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2026-04-03T10:40:09.076+02:00  INFO 29792 --- [PGDDemo] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-03T10:40:09.090+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-03T10:40:09.105+02:00  INFO 29792 --- [PGDDemo] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/PGDDemo]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.1
+	Default catalog/schema: PGDDemo/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-03T10:40:09.192+02:00  INFO 29792 --- [PGDDemo] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-03T10:40:09.202+02:00  INFO 29792 --- [PGDDemo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-03T10:40:09.226+02:00  WARN 29792 --- [PGDDemo] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-03T10:40:09.298+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 9070 (http) with context path '/'
+2026-04-03T10:40:09.300+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.fincons.pgd.PgdDemoApplication       : Started PgdDemoApplication in 0.607 seconds (process running for 1006.396)
+2026-04-03T10:40:09.301+02:00  WARN 29792 --- [PGDDemo] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-04-03T10:40:09.301+02:00  WARN 29792 --- [PGDDemo] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-04-03T10:40:09.302+02:00  INFO 29792 --- [PGDDemo] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-04-03T10:43:56.361+02:00  INFO 29792 --- [PGDDemo] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2026-04-03T10:43:56.362+02:00  INFO 29792 --- [PGDDemo] [Thread-17] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-03T10:43:56.367+02:00  INFO 29792 --- [PGDDemo] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-04-03T10:43:56.371+02:00  INFO 29792 --- [PGDDemo] [Thread-17] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-03T10:43:56.372+02:00  INFO 29792 --- [PGDDemo] [Thread-17] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2026-04-03T10:43:56.377+02:00  INFO 29792 --- [PGDDemo] [Thread-17] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2026-04-03T10:43:56.445+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.fincons.pgd.PgdDemoApplication       : Starting PgdDemoApplication using Java 25.0.2 with PID 29792 (C:\Software\Fincons\PGDDemo\PGDDemo\target\classes started by Betacom in C:\Software\Fincons\PGDDemo\PGDDemo)
+2026-04-03T10:43:56.446+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.fincons.pgd.PgdDemoApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-04-03T10:43:56.580+02:00  INFO 29792 --- [PGDDemo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-03T10:43:56.584+02:00  INFO 29792 --- [PGDDemo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2026-04-03T10:43:56.644+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9070 (http)
+2026-04-03T10:43:56.645+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-03T10:43:56.646+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-04-03T10:43:56.661+02:00  INFO 29792 --- [PGDDemo] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 214 ms
+2026-04-03T10:43:56.686+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2026-04-03T10:43:56.828+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Added connection org.postgresql.jdbc.PgConnection@46125e45
+2026-04-03T10:43:56.829+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2026-04-03T10:43:56.837+02:00  INFO 29792 --- [PGDDemo] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-03T10:43:56.867+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-03T10:43:56.884+02:00  INFO 29792 --- [PGDDemo] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/PGDDemo]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.1
+	Default catalog/schema: PGDDemo/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-03T10:43:56.976+02:00  INFO 29792 --- [PGDDemo] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-03T10:43:56.984+02:00  INFO 29792 --- [PGDDemo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-03T10:43:57.016+02:00  WARN 29792 --- [PGDDemo] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-03T10:43:57.127+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 9070 (http) with context path '/'
+2026-04-03T10:43:57.130+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.fincons.pgd.PgdDemoApplication       : Started PgdDemoApplication in 0.706 seconds (process running for 1234.226)
+2026-04-03T10:43:57.131+02:00  WARN 29792 --- [PGDDemo] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-04-03T10:43:57.132+02:00  WARN 29792 --- [PGDDemo] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-04-03T10:43:57.132+02:00  INFO 29792 --- [PGDDemo] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-04-03T10:46:20.692+02:00  INFO 29792 --- [PGDDemo] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-04-03T10:46:20.694+02:00  INFO 29792 --- [PGDDemo] [Thread-24] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-03T10:46:20.704+02:00  INFO 29792 --- [PGDDemo] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-04-03T10:46:20.706+02:00  INFO 29792 --- [PGDDemo] [Thread-24] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-03T10:46:20.707+02:00  INFO 29792 --- [PGDDemo] [Thread-24] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2026-04-03T10:46:20.709+02:00  INFO 29792 --- [PGDDemo] [Thread-24] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+2026-04-03T10:46:20.778+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.fincons.pgd.PgdDemoApplication       : Starting PgdDemoApplication using Java 25.0.2 with PID 29792 (C:\Software\Fincons\PGDDemo\PGDDemo\target\classes started by Betacom in C:\Software\Fincons\PGDDemo\PGDDemo)
+2026-04-03T10:46:20.778+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.fincons.pgd.PgdDemoApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-04-03T10:46:20.897+02:00  INFO 29792 --- [PGDDemo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-03T10:46:20.901+02:00  INFO 29792 --- [PGDDemo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2026-04-03T10:46:20.944+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9070 (http)
+2026-04-03T10:46:20.945+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-03T10:46:20.945+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-04-03T10:46:20.962+02:00  INFO 29792 --- [PGDDemo] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 182 ms
+2026-04-03T10:46:20.980+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
+2026-04-03T10:46:21.129+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-8 - Added connection org.postgresql.jdbc.PgConnection@785276d8
+2026-04-03T10:46:21.130+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Start completed.
+2026-04-03T10:46:21.130+02:00  INFO 29792 --- [PGDDemo] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-03T10:46:21.159+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-03T10:46:21.182+02:00  INFO 29792 --- [PGDDemo] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/PGDDemo]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.1
+	Default catalog/schema: PGDDemo/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-03T10:46:21.265+02:00  INFO 29792 --- [PGDDemo] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-03T10:46:21.273+02:00  INFO 29792 --- [PGDDemo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-03T10:46:21.295+02:00  WARN 29792 --- [PGDDemo] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-03T10:46:21.370+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 9070 (http) with context path '/'
+2026-04-03T10:46:21.371+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.fincons.pgd.PgdDemoApplication       : Started PgdDemoApplication in 0.618 seconds (process running for 1378.468)
+2026-04-03T10:46:21.372+02:00  WARN 29792 --- [PGDDemo] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-04-03T10:46:21.372+02:00  WARN 29792 --- [PGDDemo] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-04-03T10:46:21.373+02:00  INFO 29792 --- [PGDDemo] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-04-03T10:46:30.847+02:00  INFO 29792 --- [PGDDemo] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-04-03T10:46:30.849+02:00  INFO 29792 --- [PGDDemo] [Thread-28] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-03T10:46:30.864+02:00  INFO 29792 --- [PGDDemo] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-04-03T10:46:30.866+02:00  INFO 29792 --- [PGDDemo] [Thread-28] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-03T10:46:30.867+02:00  INFO 29792 --- [PGDDemo] [Thread-28] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown initiated...
+2026-04-03T10:46:30.870+02:00  INFO 29792 --- [PGDDemo] [Thread-28] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown completed.
+2026-04-03T10:46:30.930+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.fincons.pgd.PgdDemoApplication       : Starting PgdDemoApplication using Java 25.0.2 with PID 29792 (C:\Software\Fincons\PGDDemo\PGDDemo\target\classes started by Betacom in C:\Software\Fincons\PGDDemo\PGDDemo)
+2026-04-03T10:46:30.930+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.fincons.pgd.PgdDemoApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-04-03T10:46:31.040+02:00  INFO 29792 --- [PGDDemo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-03T10:46:31.073+02:00  INFO 29792 --- [PGDDemo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31 ms. Found 1 JPA repository interface.
+2026-04-03T10:46:31.122+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9070 (http)
+2026-04-03T10:46:31.122+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-03T10:46:31.122+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-04-03T10:46:31.138+02:00  INFO 29792 --- [PGDDemo] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 207 ms
+2026-04-03T10:46:31.174+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Starting...
+2026-04-03T10:46:31.301+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-9 - Added connection org.postgresql.jdbc.PgConnection@d1898ce
+2026-04-03T10:46:31.302+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Start completed.
+2026-04-03T10:46:31.302+02:00  INFO 29792 --- [PGDDemo] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-03T10:46:31.316+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-03T10:46:31.331+02:00  INFO 29792 --- [PGDDemo] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/PGDDemo]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.1
+	Default catalog/schema: PGDDemo/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-03T10:46:31.405+02:00  INFO 29792 --- [PGDDemo] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-03T10:46:31.414+02:00  INFO 29792 --- [PGDDemo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-03T10:46:31.435+02:00  WARN 29792 --- [PGDDemo] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-03T10:46:31.545+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-04-03T10:46:31.640+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 9070 (http) with context path '/'
+2026-04-03T10:46:31.641+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.fincons.pgd.PgdDemoApplication       : Started PgdDemoApplication in 0.73 seconds (process running for 1388.738)
+2026-04-03T10:46:31.642+02:00  WARN 29792 --- [PGDDemo] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-04-03T10:46:31.643+02:00  WARN 29792 --- [PGDDemo] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-04-03T10:46:31.643+02:00  INFO 29792 --- [PGDDemo] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-04-03T10:48:06.880+02:00  INFO 29792 --- [PGDDemo] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2026-04-03T10:48:06.881+02:00  INFO 29792 --- [PGDDemo] [Thread-32] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-03T10:48:06.888+02:00  INFO 29792 --- [PGDDemo] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-04-03T10:48:06.890+02:00  INFO 29792 --- [PGDDemo] [Thread-32] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-03T10:48:06.891+02:00  INFO 29792 --- [PGDDemo] [Thread-32] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown initiated...
+2026-04-03T10:48:06.896+02:00  INFO 29792 --- [PGDDemo] [Thread-32] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown completed.
+2026-04-03T10:48:06.957+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.fincons.pgd.PgdDemoApplication       : Starting PgdDemoApplication using Java 25.0.2 with PID 29792 (C:\Software\Fincons\PGDDemo\PGDDemo\target\classes started by Betacom in C:\Software\Fincons\PGDDemo\PGDDemo)
+2026-04-03T10:48:06.957+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.fincons.pgd.PgdDemoApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-04-03T10:48:07.067+02:00  INFO 29792 --- [PGDDemo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-03T10:48:07.079+02:00  INFO 29792 --- [PGDDemo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 1 JPA repository interface.
+2026-04-03T10:48:07.124+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9070 (http)
+2026-04-03T10:48:07.125+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-03T10:48:07.125+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-04-03T10:48:07.163+02:00  INFO 29792 --- [PGDDemo] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 205 ms
+2026-04-03T10:48:07.203+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Starting...
+2026-04-03T10:48:07.339+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-10 - Added connection org.postgresql.jdbc.PgConnection@7eaa06d4
+2026-04-03T10:48:07.340+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Start completed.
+2026-04-03T10:48:07.341+02:00  INFO 29792 --- [PGDDemo] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-03T10:48:07.358+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-03T10:48:07.374+02:00  INFO 29792 --- [PGDDemo] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/PGDDemo]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.1
+	Default catalog/schema: PGDDemo/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-03T10:48:07.470+02:00  INFO 29792 --- [PGDDemo] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-03T10:48:07.482+02:00  INFO 29792 --- [PGDDemo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-03T10:48:07.509+02:00  WARN 29792 --- [PGDDemo] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-03T10:48:07.605+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 9070 (http) with context path '/'
+2026-04-03T10:48:07.607+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.fincons.pgd.PgdDemoApplication       : Started PgdDemoApplication in 0.668 seconds (process running for 1484.703)
+2026-04-03T10:48:07.607+02:00  WARN 29792 --- [PGDDemo] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-04-03T10:48:07.607+02:00  WARN 29792 --- [PGDDemo] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-04-03T10:48:07.608+02:00  INFO 29792 --- [PGDDemo] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-04-03T10:49:10.856+02:00  INFO 29792 --- [PGDDemo] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-04-03T10:49:10.859+02:00  INFO 29792 --- [PGDDemo] [Thread-36] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-03T10:49:10.865+02:00  INFO 29792 --- [PGDDemo] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-04-03T10:49:10.867+02:00  INFO 29792 --- [PGDDemo] [Thread-36] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-03T10:49:10.868+02:00  INFO 29792 --- [PGDDemo] [Thread-36] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown initiated...
+2026-04-03T10:49:10.874+02:00  INFO 29792 --- [PGDDemo] [Thread-36] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown completed.
+2026-04-03T10:49:10.936+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.fincons.pgd.PgdDemoApplication       : Starting PgdDemoApplication using Java 25.0.2 with PID 29792 (C:\Software\Fincons\PGDDemo\PGDDemo\target\classes started by Betacom in C:\Software\Fincons\PGDDemo\PGDDemo)
+2026-04-03T10:49:10.936+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.fincons.pgd.PgdDemoApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-04-03T10:49:11.054+02:00  INFO 29792 --- [PGDDemo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-03T10:49:11.065+02:00  INFO 29792 --- [PGDDemo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 1 JPA repository interface.
+2026-04-03T10:49:11.106+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9070 (http)
+2026-04-03T10:49:11.107+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-03T10:49:11.107+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-04-03T10:49:11.121+02:00  INFO 29792 --- [PGDDemo] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 184 ms
+2026-04-03T10:49:11.160+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Starting...
+2026-04-03T10:49:11.291+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-11 - Added connection org.postgresql.jdbc.PgConnection@60275178
+2026-04-03T10:49:11.292+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Start completed.
+2026-04-03T10:49:11.293+02:00  INFO 29792 --- [PGDDemo] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-03T10:49:11.308+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-03T10:49:11.324+02:00  INFO 29792 --- [PGDDemo] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/PGDDemo]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.1
+	Default catalog/schema: PGDDemo/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-03T10:49:11.390+02:00  INFO 29792 --- [PGDDemo] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-03T10:49:11.397+02:00  INFO 29792 --- [PGDDemo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-03T10:49:11.412+02:00  WARN 29792 --- [PGDDemo] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'utenteController': Lookup method resolution failed
+2026-04-03T10:49:11.412+02:00  INFO 29792 --- [PGDDemo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-03T10:49:11.413+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Shutdown initiated...
+2026-04-03T10:49:11.578+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Shutdown completed.
+2026-04-03T10:49:11.579+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-04-03T10:49:11.585+02:00  INFO 29792 --- [PGDDemo] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-04-03T10:49:11.587+02:00 ERROR 29792 --- [PGDDemo] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'utenteController': Lookup method resolution failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.checkLookupMethods(AutowiredAnnotationBeanPostProcessor.java:482) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:352) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1321) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1218) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1218) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1184) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1121) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:994) ~[spring-context-7.0.6.jar:7.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-7.0.6.jar:7.0.6]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.0.5.jar:4.0.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.0.5.jar:4.0.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.0.5.jar:4.0.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.0.5.jar:4.0.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.0.5.jar:4.0.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.0.5.jar:4.0.5]
+	at com.fincons.pgd.PgdDemoApplication.main(PgdDemoApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52) ~[spring-boot-devtools-4.0.5.jar:4.0.5]
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.fincons.pgd.controllers.UtenteController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@fe19b94]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:483) ~[spring-core-7.0.6.jar:7.0.6]
+	at org.springframework.util.ReflectionUtils.doWithLocalMethods(ReflectionUtils.java:320) ~[spring-core-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.checkLookupMethods(AutowiredAnnotationBeanPostProcessor.java:460) ~[spring-beans-7.0.6.jar:7.0.6]
+	... 24 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: UtenteReq
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3010) ~[na:na]
+	at java.base/java.lang.Class.getDeclaredMethods(Class.java:2329) ~[na:na]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:465) ~[spring-core-7.0.6.jar:7.0.6]
+	... 26 common frames omitted
+Caused by: java.lang.ClassNotFoundException: UtenteReq
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:580) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:490) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:547) ~[na:na]
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:123) ~[spring-boot-devtools-4.0.5.jar:4.0.5]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:490) ~[na:na]
+	... 30 common frames omitted
+
+2026-04-03T10:49:39.614+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.fincons.pgd.PgdDemoApplication       : Starting PgdDemoApplication using Java 25.0.2 with PID 29792 (C:\Software\Fincons\PGDDemo\PGDDemo\target\classes started by Betacom in C:\Software\Fincons\PGDDemo\PGDDemo)
+2026-04-03T10:49:39.614+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.fincons.pgd.PgdDemoApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-04-03T10:49:39.725+02:00  INFO 29792 --- [PGDDemo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-03T10:49:39.737+02:00  INFO 29792 --- [PGDDemo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 1 JPA repository interface.
+2026-04-03T10:49:39.780+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9070 (http)
+2026-04-03T10:49:39.780+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-03T10:49:39.780+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-04-03T10:49:39.795+02:00  INFO 29792 --- [PGDDemo] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 179 ms
+2026-04-03T10:49:39.812+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Starting...
+2026-04-03T10:49:39.946+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-12 - Added connection org.postgresql.jdbc.PgConnection@2beb26a7
+2026-04-03T10:49:39.946+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Start completed.
+2026-04-03T10:49:39.947+02:00  INFO 29792 --- [PGDDemo] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-03T10:49:39.959+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-03T10:49:39.976+02:00  INFO 29792 --- [PGDDemo] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/PGDDemo]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.1
+	Default catalog/schema: PGDDemo/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-03T10:49:40.054+02:00  INFO 29792 --- [PGDDemo] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-03T10:49:40.063+02:00  INFO 29792 --- [PGDDemo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-03T10:49:40.073+02:00  WARN 29792 --- [PGDDemo] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'utenteController': Lookup method resolution failed
+2026-04-03T10:49:40.073+02:00  INFO 29792 --- [PGDDemo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-03T10:49:40.073+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Shutdown initiated...
+2026-04-03T10:49:40.211+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Shutdown completed.
+2026-04-03T10:49:40.212+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-04-03T10:49:40.220+02:00  INFO 29792 --- [PGDDemo] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-04-03T10:49:40.224+02:00 ERROR 29792 --- [PGDDemo] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'utenteController': Lookup method resolution failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.checkLookupMethods(AutowiredAnnotationBeanPostProcessor.java:482) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:352) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1321) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1218) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1218) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1184) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1121) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:994) ~[spring-context-7.0.6.jar:7.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-7.0.6.jar:7.0.6]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.0.5.jar:4.0.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.0.5.jar:4.0.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.0.5.jar:4.0.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.0.5.jar:4.0.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.0.5.jar:4.0.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.0.5.jar:4.0.5]
+	at com.fincons.pgd.PgdDemoApplication.main(PgdDemoApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52) ~[spring-boot-devtools-4.0.5.jar:4.0.5]
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.fincons.pgd.controllers.UtenteController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@6b24a634]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:483) ~[spring-core-7.0.6.jar:7.0.6]
+	at org.springframework.util.ReflectionUtils.doWithLocalMethods(ReflectionUtils.java:320) ~[spring-core-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.checkLookupMethods(AutowiredAnnotationBeanPostProcessor.java:460) ~[spring-beans-7.0.6.jar:7.0.6]
+	... 24 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: UtenteReq
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3010) ~[na:na]
+	at java.base/java.lang.Class.getDeclaredMethods(Class.java:2329) ~[na:na]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:465) ~[spring-core-7.0.6.jar:7.0.6]
+	... 26 common frames omitted
+Caused by: java.lang.ClassNotFoundException: UtenteReq
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:580) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:490) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:547) ~[na:na]
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:123) ~[spring-boot-devtools-4.0.5.jar:4.0.5]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:490) ~[na:na]
+	... 30 common frames omitted
+
+2026-04-03T10:49:54.807+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.fincons.pgd.PgdDemoApplication       : Starting PgdDemoApplication using Java 25.0.2 with PID 29792 (C:\Software\Fincons\PGDDemo\PGDDemo\target\classes started by Betacom in C:\Software\Fincons\PGDDemo\PGDDemo)
+2026-04-03T10:49:54.807+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.fincons.pgd.PgdDemoApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-04-03T10:49:54.945+02:00  INFO 29792 --- [PGDDemo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-03T10:49:54.956+02:00  INFO 29792 --- [PGDDemo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 1 JPA repository interface.
+2026-04-03T10:49:54.992+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9070 (http)
+2026-04-03T10:49:54.993+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-03T10:49:54.993+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-04-03T10:49:55.008+02:00  INFO 29792 --- [PGDDemo] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 199 ms
+2026-04-03T10:49:55.026+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Starting...
+2026-04-03T10:49:55.171+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-13 - Added connection org.postgresql.jdbc.PgConnection@42127816
+2026-04-03T10:49:55.172+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Start completed.
+2026-04-03T10:49:55.173+02:00  INFO 29792 --- [PGDDemo] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-03T10:49:55.187+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-03T10:49:55.203+02:00  INFO 29792 --- [PGDDemo] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/PGDDemo]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.1
+	Default catalog/schema: PGDDemo/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-03T10:49:55.306+02:00  INFO 29792 --- [PGDDemo] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-03T10:49:55.314+02:00  INFO 29792 --- [PGDDemo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-03T10:49:55.323+02:00  WARN 29792 --- [PGDDemo] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'utenteController': Lookup method resolution failed
+2026-04-03T10:49:55.323+02:00  INFO 29792 --- [PGDDemo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-03T10:49:55.324+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Shutdown initiated...
+2026-04-03T10:49:55.440+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Shutdown completed.
+2026-04-03T10:49:55.442+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-04-03T10:49:55.451+02:00  INFO 29792 --- [PGDDemo] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-04-03T10:49:55.453+02:00 ERROR 29792 --- [PGDDemo] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'utenteController': Lookup method resolution failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.checkLookupMethods(AutowiredAnnotationBeanPostProcessor.java:482) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:352) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1321) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1218) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1218) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1184) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1121) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:994) ~[spring-context-7.0.6.jar:7.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-7.0.6.jar:7.0.6]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.0.5.jar:4.0.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.0.5.jar:4.0.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.0.5.jar:4.0.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.0.5.jar:4.0.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.0.5.jar:4.0.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.0.5.jar:4.0.5]
+	at com.fincons.pgd.PgdDemoApplication.main(PgdDemoApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52) ~[spring-boot-devtools-4.0.5.jar:4.0.5]
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.fincons.pgd.controllers.UtenteController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@1e9ac255]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:483) ~[spring-core-7.0.6.jar:7.0.6]
+	at org.springframework.util.ReflectionUtils.doWithLocalMethods(ReflectionUtils.java:320) ~[spring-core-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.checkLookupMethods(AutowiredAnnotationBeanPostProcessor.java:460) ~[spring-beans-7.0.6.jar:7.0.6]
+	... 24 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: UtenteReq
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3010) ~[na:na]
+	at java.base/java.lang.Class.getDeclaredMethods(Class.java:2329) ~[na:na]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:465) ~[spring-core-7.0.6.jar:7.0.6]
+	... 26 common frames omitted
+Caused by: java.lang.ClassNotFoundException: UtenteReq
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:580) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:490) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:547) ~[na:na]
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:123) ~[spring-boot-devtools-4.0.5.jar:4.0.5]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:490) ~[na:na]
+	... 30 common frames omitted
+
+2026-04-03T10:50:48.585+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.fincons.pgd.PgdDemoApplication       : Starting PgdDemoApplication using Java 25.0.2 with PID 29792 (C:\Software\Fincons\PGDDemo\PGDDemo\target\classes started by Betacom in C:\Software\Fincons\PGDDemo\PGDDemo)
+2026-04-03T10:50:48.585+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.fincons.pgd.PgdDemoApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-04-03T10:50:48.708+02:00  INFO 29792 --- [PGDDemo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-03T10:50:48.719+02:00  INFO 29792 --- [PGDDemo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 1 JPA repository interface.
+2026-04-03T10:50:48.756+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9070 (http)
+2026-04-03T10:50:48.756+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-03T10:50:48.758+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-04-03T10:50:48.772+02:00  INFO 29792 --- [PGDDemo] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 185 ms
+2026-04-03T10:50:48.789+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Starting...
+2026-04-03T10:50:48.925+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-14 - Added connection org.postgresql.jdbc.PgConnection@7208cbcd
+2026-04-03T10:50:48.926+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Start completed.
+2026-04-03T10:50:48.926+02:00  INFO 29792 --- [PGDDemo] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-03T10:50:48.940+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-03T10:50:48.954+02:00  INFO 29792 --- [PGDDemo] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/PGDDemo]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.1
+	Default catalog/schema: PGDDemo/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-03T10:50:49.053+02:00  INFO 29792 --- [PGDDemo] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-03T10:50:49.061+02:00  INFO 29792 --- [PGDDemo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-03T10:50:49.071+02:00  WARN 29792 --- [PGDDemo] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'utenteController': Lookup method resolution failed
+2026-04-03T10:50:49.071+02:00  INFO 29792 --- [PGDDemo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-03T10:50:49.072+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Shutdown initiated...
+2026-04-03T10:50:49.193+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Shutdown completed.
+2026-04-03T10:50:49.194+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-04-03T10:50:49.200+02:00  INFO 29792 --- [PGDDemo] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-04-03T10:50:49.203+02:00 ERROR 29792 --- [PGDDemo] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'utenteController': Lookup method resolution failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.checkLookupMethods(AutowiredAnnotationBeanPostProcessor.java:482) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:352) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1321) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1218) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1218) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1184) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1121) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:994) ~[spring-context-7.0.6.jar:7.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-7.0.6.jar:7.0.6]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.0.5.jar:4.0.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.0.5.jar:4.0.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.0.5.jar:4.0.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.0.5.jar:4.0.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.0.5.jar:4.0.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.0.5.jar:4.0.5]
+	at com.fincons.pgd.PgdDemoApplication.main(PgdDemoApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52) ~[spring-boot-devtools-4.0.5.jar:4.0.5]
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.fincons.pgd.controllers.UtenteController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@69addd3b]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:483) ~[spring-core-7.0.6.jar:7.0.6]
+	at org.springframework.util.ReflectionUtils.doWithLocalMethods(ReflectionUtils.java:320) ~[spring-core-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.checkLookupMethods(AutowiredAnnotationBeanPostProcessor.java:460) ~[spring-beans-7.0.6.jar:7.0.6]
+	... 24 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: UtenteReq
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3010) ~[na:na]
+	at java.base/java.lang.Class.getDeclaredMethods(Class.java:2329) ~[na:na]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:465) ~[spring-core-7.0.6.jar:7.0.6]
+	... 26 common frames omitted
+Caused by: java.lang.ClassNotFoundException: UtenteReq
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:580) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:490) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:547) ~[na:na]
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:123) ~[spring-boot-devtools-4.0.5.jar:4.0.5]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:490) ~[na:na]
+	... 30 common frames omitted
+
+2026-04-03T10:51:37.245+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.fincons.pgd.PgdDemoApplication       : Starting PgdDemoApplication using Java 25.0.2 with PID 29792 (C:\Software\Fincons\PGDDemo\PGDDemo\target\classes started by Betacom in C:\Software\Fincons\PGDDemo\PGDDemo)
+2026-04-03T10:51:37.245+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.fincons.pgd.PgdDemoApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-04-03T10:51:37.367+02:00  INFO 29792 --- [PGDDemo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-03T10:51:37.378+02:00  INFO 29792 --- [PGDDemo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 1 JPA repository interface.
+2026-04-03T10:51:37.429+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9070 (http)
+2026-04-03T10:51:37.429+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-03T10:51:37.429+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-04-03T10:51:37.443+02:00  INFO 29792 --- [PGDDemo] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 197 ms
+2026-04-03T10:51:37.459+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Starting...
+2026-04-03T10:51:37.586+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-15 - Added connection org.postgresql.jdbc.PgConnection@46a56b98
+2026-04-03T10:51:37.587+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Start completed.
+2026-04-03T10:51:37.587+02:00  INFO 29792 --- [PGDDemo] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-03T10:51:37.601+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-03T10:51:37.615+02:00  INFO 29792 --- [PGDDemo] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/PGDDemo]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.1
+	Default catalog/schema: PGDDemo/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-03T10:51:37.674+02:00  INFO 29792 --- [PGDDemo] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-03T10:51:37.682+02:00  INFO 29792 --- [PGDDemo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-03T10:51:37.701+02:00  WARN 29792 --- [PGDDemo] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'utenteController': Lookup method resolution failed
+2026-04-03T10:51:37.702+02:00  INFO 29792 --- [PGDDemo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-03T10:51:37.703+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Shutdown initiated...
+2026-04-03T10:51:37.880+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Shutdown completed.
+2026-04-03T10:51:37.881+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-04-03T10:51:37.887+02:00  INFO 29792 --- [PGDDemo] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-04-03T10:51:37.894+02:00 ERROR 29792 --- [PGDDemo] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'utenteController': Lookup method resolution failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.checkLookupMethods(AutowiredAnnotationBeanPostProcessor.java:482) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:352) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1321) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1218) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1218) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1184) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1121) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:994) ~[spring-context-7.0.6.jar:7.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-7.0.6.jar:7.0.6]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.0.5.jar:4.0.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.0.5.jar:4.0.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.0.5.jar:4.0.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.0.5.jar:4.0.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.0.5.jar:4.0.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.0.5.jar:4.0.5]
+	at com.fincons.pgd.PgdDemoApplication.main(PgdDemoApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52) ~[spring-boot-devtools-4.0.5.jar:4.0.5]
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.fincons.pgd.controllers.UtenteController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@6a93d6a1]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:483) ~[spring-core-7.0.6.jar:7.0.6]
+	at org.springframework.util.ReflectionUtils.doWithLocalMethods(ReflectionUtils.java:320) ~[spring-core-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.checkLookupMethods(AutowiredAnnotationBeanPostProcessor.java:460) ~[spring-beans-7.0.6.jar:7.0.6]
+	... 24 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: UtenteReq
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3010) ~[na:na]
+	at java.base/java.lang.Class.getDeclaredMethods(Class.java:2329) ~[na:na]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:465) ~[spring-core-7.0.6.jar:7.0.6]
+	... 26 common frames omitted
+Caused by: java.lang.ClassNotFoundException: UtenteReq
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:580) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:490) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:547) ~[na:na]
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:123) ~[spring-boot-devtools-4.0.5.jar:4.0.5]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:490) ~[na:na]
+	... 30 common frames omitted
+
+2026-04-03T10:52:37.716+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.fincons.pgd.PgdDemoApplication       : Starting PgdDemoApplication using Java 25.0.2 with PID 29792 (C:\Software\Fincons\PGDDemo\PGDDemo\target\classes started by Betacom in C:\Software\Fincons\PGDDemo\PGDDemo)
+2026-04-03T10:52:37.716+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.fincons.pgd.PgdDemoApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-04-03T10:52:37.829+02:00  INFO 29792 --- [PGDDemo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-03T10:52:37.840+02:00  INFO 29792 --- [PGDDemo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 1 JPA repository interface.
+2026-04-03T10:52:37.883+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9070 (http)
+2026-04-03T10:52:37.883+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-03T10:52:37.884+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-04-03T10:52:37.899+02:00  INFO 29792 --- [PGDDemo] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 182 ms
+2026-04-03T10:52:37.925+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-16 - Starting...
+2026-04-03T10:52:38.059+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-16 - Added connection org.postgresql.jdbc.PgConnection@47201a7a
+2026-04-03T10:52:38.059+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-16 - Start completed.
+2026-04-03T10:52:38.060+02:00  INFO 29792 --- [PGDDemo] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-03T10:52:38.076+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-03T10:52:38.098+02:00  INFO 29792 --- [PGDDemo] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/PGDDemo]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.1
+	Default catalog/schema: PGDDemo/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-03T10:52:38.164+02:00  INFO 29792 --- [PGDDemo] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-03T10:52:38.176+02:00  INFO 29792 --- [PGDDemo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-03T10:52:38.202+02:00  WARN 29792 --- [PGDDemo] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-03T10:52:38.335+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 9070 (http) with context path '/'
+2026-04-03T10:52:38.337+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.fincons.pgd.PgdDemoApplication       : Started PgdDemoApplication in 0.641 seconds (process running for 1755.433)
+2026-04-03T10:52:38.337+02:00  WARN 29792 --- [PGDDemo] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-04-03T10:52:38.338+02:00  WARN 29792 --- [PGDDemo] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-04-03T10:52:38.338+02:00  INFO 29792 --- [PGDDemo] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-04-03T10:53:27.479+02:00  INFO 29792 --- [PGDDemo] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-04-03T10:53:27.481+02:00  INFO 29792 --- [PGDDemo] [Thread-40] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-03T10:53:27.487+02:00  INFO 29792 --- [PGDDemo] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-04-03T10:53:27.489+02:00  INFO 29792 --- [PGDDemo] [Thread-40] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-03T10:53:27.490+02:00  INFO 29792 --- [PGDDemo] [Thread-40] com.zaxxer.hikari.HikariDataSource       : HikariPool-16 - Shutdown initiated...
+2026-04-03T10:53:27.494+02:00  INFO 29792 --- [PGDDemo] [Thread-40] com.zaxxer.hikari.HikariDataSource       : HikariPool-16 - Shutdown completed.
+2026-04-03T10:53:27.562+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.fincons.pgd.PgdDemoApplication       : Starting PgdDemoApplication using Java 25.0.2 with PID 29792 (C:\Software\Fincons\PGDDemo\PGDDemo\target\classes started by Betacom in C:\Software\Fincons\PGDDemo\PGDDemo)
+2026-04-03T10:53:27.562+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.fincons.pgd.PgdDemoApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-04-03T10:53:27.685+02:00  INFO 29792 --- [PGDDemo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-03T10:53:27.695+02:00  INFO 29792 --- [PGDDemo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 1 JPA repository interface.
+2026-04-03T10:53:27.747+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9070 (http)
+2026-04-03T10:53:27.748+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-03T10:53:27.748+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-04-03T10:53:27.761+02:00  INFO 29792 --- [PGDDemo] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 198 ms
+2026-04-03T10:53:27.779+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-17 - Starting...
+2026-04-03T10:53:27.921+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-17 - Added connection org.postgresql.jdbc.PgConnection@3a6b3ed8
+2026-04-03T10:53:27.921+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-17 - Start completed.
+2026-04-03T10:53:27.922+02:00  INFO 29792 --- [PGDDemo] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-03T10:53:27.936+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-03T10:53:27.952+02:00  INFO 29792 --- [PGDDemo] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/PGDDemo]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.1
+	Default catalog/schema: PGDDemo/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-03T10:53:28.036+02:00  INFO 29792 --- [PGDDemo] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-03T10:53:28.045+02:00  INFO 29792 --- [PGDDemo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-03T10:53:28.071+02:00  WARN 29792 --- [PGDDemo] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-03T10:53:28.155+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 9070 (http) with context path '/'
+2026-04-03T10:53:28.157+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.fincons.pgd.PgdDemoApplication       : Started PgdDemoApplication in 0.615 seconds (process running for 1805.253)
+2026-04-03T10:53:28.158+02:00  WARN 29792 --- [PGDDemo] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-04-03T10:53:28.158+02:00  WARN 29792 --- [PGDDemo] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-04-03T10:53:28.158+02:00  INFO 29792 --- [PGDDemo] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-04-03T10:55:10.144+02:00  INFO 29792 --- [PGDDemo] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2026-04-03T10:55:10.146+02:00  INFO 29792 --- [PGDDemo] [Thread-59] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-03T10:55:10.157+02:00  INFO 29792 --- [PGDDemo] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-04-03T10:55:10.161+02:00  INFO 29792 --- [PGDDemo] [Thread-59] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-03T10:55:10.161+02:00  INFO 29792 --- [PGDDemo] [Thread-59] com.zaxxer.hikari.HikariDataSource       : HikariPool-17 - Shutdown initiated...
+2026-04-03T10:55:10.166+02:00  INFO 29792 --- [PGDDemo] [Thread-59] com.zaxxer.hikari.HikariDataSource       : HikariPool-17 - Shutdown completed.
+2026-04-03T10:55:10.239+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.fincons.pgd.PgdDemoApplication       : Starting PgdDemoApplication using Java 25.0.2 with PID 29792 (C:\Software\Fincons\PGDDemo\PGDDemo\target\classes started by Betacom in C:\Software\Fincons\PGDDemo\PGDDemo)
+2026-04-03T10:55:10.239+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.fincons.pgd.PgdDemoApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-04-03T10:55:10.367+02:00  INFO 29792 --- [PGDDemo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-03T10:55:10.378+02:00  INFO 29792 --- [PGDDemo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 1 JPA repository interface.
+2026-04-03T10:55:10.428+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9070 (http)
+2026-04-03T10:55:10.429+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-03T10:55:10.430+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-04-03T10:55:10.443+02:00  INFO 29792 --- [PGDDemo] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 202 ms
+2026-04-03T10:55:10.464+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-18 - Starting...
+2026-04-03T10:55:10.586+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-18 - Added connection org.postgresql.jdbc.PgConnection@396ef3da
+2026-04-03T10:55:10.586+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-18 - Start completed.
+2026-04-03T10:55:10.587+02:00  INFO 29792 --- [PGDDemo] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-03T10:55:10.602+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-03T10:55:10.618+02:00  INFO 29792 --- [PGDDemo] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/PGDDemo]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.1
+	Default catalog/schema: PGDDemo/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-03T10:55:10.702+02:00  INFO 29792 --- [PGDDemo] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-03T10:55:10.709+02:00  INFO 29792 --- [PGDDemo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-03T10:55:10.740+02:00  WARN 29792 --- [PGDDemo] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-03T10:55:10.844+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 9070 (http) with context path '/'
+2026-04-03T10:55:10.846+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.fincons.pgd.PgdDemoApplication       : Started PgdDemoApplication in 0.628 seconds (process running for 1907.943)
+2026-04-03T10:55:10.847+02:00  WARN 29792 --- [PGDDemo] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-04-03T10:55:10.847+02:00  WARN 29792 --- [PGDDemo] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-04-03T10:55:10.847+02:00  INFO 29792 --- [PGDDemo] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-04-03T10:55:43.662+02:00  INFO 29792 --- [PGDDemo] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (1 addition, 0 deletions, 1 modification)
+2026-04-03T10:55:43.664+02:00  INFO 29792 --- [PGDDemo] [Thread-63] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-03T10:55:43.672+02:00  INFO 29792 --- [PGDDemo] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-04-03T10:55:43.675+02:00  INFO 29792 --- [PGDDemo] [Thread-63] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-03T10:55:43.675+02:00  INFO 29792 --- [PGDDemo] [Thread-63] com.zaxxer.hikari.HikariDataSource       : HikariPool-18 - Shutdown initiated...
+2026-04-03T10:55:43.679+02:00  INFO 29792 --- [PGDDemo] [Thread-63] com.zaxxer.hikari.HikariDataSource       : HikariPool-18 - Shutdown completed.
+2026-04-03T10:55:43.743+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.fincons.pgd.PgdDemoApplication       : Starting PgdDemoApplication using Java 25.0.2 with PID 29792 (C:\Software\Fincons\PGDDemo\PGDDemo\target\classes started by Betacom in C:\Software\Fincons\PGDDemo\PGDDemo)
+2026-04-03T10:55:43.743+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.fincons.pgd.PgdDemoApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-04-03T10:55:43.859+02:00  INFO 29792 --- [PGDDemo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-03T10:55:43.870+02:00  INFO 29792 --- [PGDDemo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 1 JPA repository interface.
+2026-04-03T10:55:43.904+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9070 (http)
+2026-04-03T10:55:43.904+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-03T10:55:43.904+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-04-03T10:55:43.918+02:00  INFO 29792 --- [PGDDemo] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 174 ms
+2026-04-03T10:55:43.936+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-19 - Starting...
+2026-04-03T10:55:44.076+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-19 - Added connection org.postgresql.jdbc.PgConnection@301ee2c9
+2026-04-03T10:55:44.076+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-19 - Start completed.
+2026-04-03T10:55:44.077+02:00  INFO 29792 --- [PGDDemo] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-03T10:55:44.090+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-03T10:55:44.107+02:00  INFO 29792 --- [PGDDemo] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/PGDDemo]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.1
+	Default catalog/schema: PGDDemo/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-03T10:55:44.189+02:00  INFO 29792 --- [PGDDemo] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-03T10:55:44.197+02:00  INFO 29792 --- [PGDDemo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-03T10:55:44.224+02:00  WARN 29792 --- [PGDDemo] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-03T10:55:44.308+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 9070 (http) with context path '/'
+2026-04-03T10:55:44.310+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.fincons.pgd.PgdDemoApplication       : Started PgdDemoApplication in 0.586 seconds (process running for 1941.406)
+2026-04-03T10:55:44.310+02:00  WARN 29792 --- [PGDDemo] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-04-03T10:55:44.311+02:00  WARN 29792 --- [PGDDemo] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-04-03T10:55:44.311+02:00  INFO 29792 --- [PGDDemo] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-04-03T10:56:29.150+02:00  INFO 29792 --- [PGDDemo] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2026-04-03T10:56:29.153+02:00  INFO 29792 --- [PGDDemo] [Thread-67] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-03T10:56:29.166+02:00  INFO 29792 --- [PGDDemo] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-04-03T10:56:29.168+02:00  INFO 29792 --- [PGDDemo] [Thread-67] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-03T10:56:29.168+02:00  INFO 29792 --- [PGDDemo] [Thread-67] com.zaxxer.hikari.HikariDataSource       : HikariPool-19 - Shutdown initiated...
+2026-04-03T10:56:29.173+02:00  INFO 29792 --- [PGDDemo] [Thread-67] com.zaxxer.hikari.HikariDataSource       : HikariPool-19 - Shutdown completed.
+2026-04-03T10:56:29.240+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.fincons.pgd.PgdDemoApplication       : Starting PgdDemoApplication using Java 25.0.2 with PID 29792 (C:\Software\Fincons\PGDDemo\PGDDemo\target\classes started by Betacom in C:\Software\Fincons\PGDDemo\PGDDemo)
+2026-04-03T10:56:29.240+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.fincons.pgd.PgdDemoApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-04-03T10:56:29.354+02:00  INFO 29792 --- [PGDDemo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-03T10:56:29.365+02:00  INFO 29792 --- [PGDDemo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 1 JPA repository interface.
+2026-04-03T10:56:29.401+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9070 (http)
+2026-04-03T10:56:29.401+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-03T10:56:29.401+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-04-03T10:56:29.415+02:00  INFO 29792 --- [PGDDemo] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 174 ms
+2026-04-03T10:56:29.433+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-20 - Starting...
+2026-04-03T10:56:29.581+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-20 - Added connection org.postgresql.jdbc.PgConnection@78677cd5
+2026-04-03T10:56:29.581+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-20 - Start completed.
+2026-04-03T10:56:29.582+02:00  INFO 29792 --- [PGDDemo] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-03T10:56:29.597+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-03T10:56:29.631+02:00  INFO 29792 --- [PGDDemo] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/PGDDemo]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.1
+	Default catalog/schema: PGDDemo/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-03T10:56:29.699+02:00  INFO 29792 --- [PGDDemo] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-03T10:56:29.715+02:00  INFO 29792 --- [PGDDemo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-03T10:56:29.740+02:00  WARN 29792 --- [PGDDemo] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-03T10:56:29.821+02:00  INFO 29792 --- [PGDDemo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 9070 (http) with context path '/'
+2026-04-03T10:56:29.822+02:00  INFO 29792 --- [PGDDemo] [restartedMain] com.fincons.pgd.PgdDemoApplication       : Started PgdDemoApplication in 0.602 seconds (process running for 1986.919)
+2026-04-03T10:56:29.823+02:00  WARN 29792 --- [PGDDemo] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-04-03T10:56:29.823+02:00  WARN 29792 --- [PGDDemo] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-04-03T10:56:29.823+02:00  INFO 29792 --- [PGDDemo] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
