@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.fincons.pgd.dto.inputs.UtenteReq;
+import com.fincons.pgd.models.services.interfaces.IMessaggioServices;
 import com.fincons.pgd.models.services.interfaces.IUtenteServices;
 import com.fincons.pgd.response.Resp;
 
@@ -21,6 +22,7 @@ import lombok.extern.slf4j.Slf4j;
 public class UtenteController {
 	
 	private final IUtenteServices utS;
+	private final IMessaggioServices    msgS;
 	
 	@PostMapping("/create")
 	public ResponseEntity<Resp> create(@RequestBody(required = true)  UtenteReq req){
@@ -28,6 +30,7 @@ public class UtenteController {
 		HttpStatus status = HttpStatus.OK;
 		try {
 			utS.create(req);
+			r.setMsg(msgS.get("rest_created"));
 		} catch (Exception e) {
 			r.setMsg(e.getMessage());
 			status = HttpStatus.BAD_REQUEST;
