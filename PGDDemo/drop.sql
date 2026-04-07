@@ -46,6 +46,8 @@
 
     drop table if exists delega cascade;
 
+    drop table if exists messaggi_sistema cascade;
+
     drop table if exists profilo cascade;
 
     drop table if exists scenario cascade;
