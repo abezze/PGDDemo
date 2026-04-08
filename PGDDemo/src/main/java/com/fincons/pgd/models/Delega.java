@@ -88,4 +88,8 @@ public class Delega {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "idUltimoStatoDelega", nullable = false)
     private StatoDelega statoCorrente;
+    
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "idTipoDelegato_FK", nullable = false)
+    private TipoDelegato tipoDelegato;
 }

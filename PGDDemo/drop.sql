@@ -26,6 +26,9 @@
        drop constraint if exists FKtkjovr2le9oyq0qf5c71v2j0i;
 
     alter table if exists delega 
+       drop constraint if exists FK6q3qpa03d5sxefenaubo8gljd;
+
+    alter table if exists delega 
        drop constraint if exists FKcrflwniqlgnkl0dp0fx978j6k;
 
     alter table if exists delega 
@@ -70,5 +73,7 @@
     drop table if exists storicodelega cascade;
 
     drop table if exists storicostatoappuntamento cascade;
+
+    drop table if exists tipodelegato cascade;
 
     drop table if exists utente cascade;
