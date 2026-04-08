@@ -1,6 +1,7 @@
 package com.fincons.pgd.models;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 
 import jakarta.persistence.Column;
@@ -49,9 +50,34 @@ public class Delega {
 
     
     private LocalDate dataInizioValidita;
-
     
     private LocalDate dataFineValidita;
+    
+    @Column(name = "dataCreazione")
+    private LocalDateTime dataCreazione;
+
+    @Column(name = "dataUltimoAggiornamento")
+    private LocalDateTime dataUltimoAggiornamento;
+
+    
+    @Column(name = "dicEsercenteRespGenitorialeDelegato")
+    private Boolean dicEsercenteRespGenitorialeDelegato;
+
+    @Column(name = "dicEsercenteRespGenitorialeApprovatore")
+    private Boolean dicEsercenteRespGenitorialeApprovatore;
+
+    @Column(name = "flagResponsabilitaGenitoriale")
+    private Boolean flagResponsabilitaGenitoriale;
+
+   
+    @Column(name = "esitoVerificaResponsabilitaGenitoriale")
+    private String esitoVerificaResponsabilitaGenitoriale;
+
+    @Column(name = "dataVideoRegistrazione")
+    private LocalDateTime dataVideoRegistrazione;
+
+    @Column(name = "idVideoChiamata")
+    private String idVideoChiamata;
 /*
     @OneToMany(mappedBy = "delega", cascade = CascadeType.ALL)
     private List<DocumentiAllegati> documenti;
