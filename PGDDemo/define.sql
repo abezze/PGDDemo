@@ -45,7 +45,7 @@
         id_delega_fk bigint not null,
         id_tipologia_documento_fk bigint not null,
         formato_file varchar(10),
-        nome_file varchar(255) not null,
+        nome_file varchar(255) not null unique,
         path_bucket varchar(255),
         primary key (id)
     );

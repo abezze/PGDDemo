@@ -34,7 +34,7 @@ public class DocumentiAllegati {
     @JoinColumn(name = "idTipologiaDocumento_FK", nullable = false)
     private TipologiaDocumento tipologiaDocumento;
 
-    @Column(name = "nomeFile", nullable = false)
+    @Column(name = "nomeFile", nullable = false, unique = true)
     private String nomeFile;
 
     @Column(name = "pathBucket")
