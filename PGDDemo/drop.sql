@@ -23,6 +23,9 @@
        drop constraint if exists FK1mmeaobkuv245chn7shhb5ih1;
 
     alter table if exists delega 
+       drop constraint if exists FKtkjovr2le9oyq0qf5c71v2j0i;
+
+    alter table if exists delega 
        drop constraint if exists FKcrflwniqlgnkl0dp0fx978j6k;
 
     alter table if exists delega 

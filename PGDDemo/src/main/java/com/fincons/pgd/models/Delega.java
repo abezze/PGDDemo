@@ -58,4 +58,8 @@ public class Delega {
 */
     @OneToMany(mappedBy = "delega")
     private List<StoricoDelega> storicoStati;
+    
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "idUltimoStatoDelega", nullable = false)
+    private StatoDelega statoCorrente;
 }
