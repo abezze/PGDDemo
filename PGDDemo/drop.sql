@@ -34,6 +34,12 @@
     alter table if exists delega 
        drop constraint if exists FK73olidakub711s9184wopu2f2;
 
+    alter table if exists documentiallegati 
+       drop constraint if exists FK8us5dkm6nbhxm7isa2uuckcrq;
+
+    alter table if exists documentiallegati 
+       drop constraint if exists FK8ges02h5rql6919vvspvlubw2;
+
     alter table if exists storicodelega 
        drop constraint if exists FK67ity6goblm8ljes857uvxv0n;
 
@@ -58,6 +64,8 @@
 
     drop table if exists delega cascade;
 
+    drop table if exists documentiallegati cascade;
+
     drop table if exists messaggi_sistema cascade;
 
     drop table if exists operatore cascade;
@@ -75,5 +83,7 @@
     drop table if exists storicostatoappuntamento cascade;
 
     drop table if exists tipodelegato cascade;
+
+    drop table if exists tipologiadocumento cascade;
 
     drop table if exists utente cascade;

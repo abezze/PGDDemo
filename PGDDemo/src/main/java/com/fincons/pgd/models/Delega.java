@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -78,10 +79,10 @@ public class Delega {
 
     @Column(name = "idVideoChiamata")
     private String idVideoChiamata;
-/*
+
     @OneToMany(mappedBy = "delega", cascade = CascadeType.ALL)
     private List<DocumentiAllegati> documenti;
-*/
+
     @OneToMany(mappedBy = "delega")
     private List<StoricoDelega> storicoStati;
     
