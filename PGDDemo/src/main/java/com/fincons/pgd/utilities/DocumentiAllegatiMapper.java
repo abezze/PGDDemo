@@ -1,21 +1,44 @@
 package com.fincons.pgd.utilities;
 
-import com.fincons.pgd.dto.outputs.UtenteDTO;
-import com.fincons.pgd.models.Utente;
+import java.time.LocalDateTime;
+import java.util.List;
+import java.util.stream.Collectors;
 
+import org.springframework.stereotype.Component;
+
+import com.fincons.pgd.dto.outputs.DocumentiAllegatiDTO;
+import com.fincons.pgd.models.DocumentiAllegati;
+import com.fincons.pgd.models.services.interfaces.IUploadServices;
+
+import lombok.RequiredArgsConstructor;
+
+@RequiredArgsConstructor
+@Component
 public class DocumentiAllegatiMapper {
 	
-	public static UtenteDTO buildUtenteDto(Utente u) {
-		return UtenteDTO.builder() 
-				.id(u.getId())
-				.nome(u.getNome())
-				.cognome(u.getCognome())
-				.codiceFiscale(u.getCodiceFiscale())
-				.indirizzoEmail(u.getIndirizzoEmail())
-				.flagEmailCertificata(u.getFlagEmailCertificata())
-				.flagAccettazioneProxy(u.getFlagAccettazioneProxy())
+	private final IUploadServices uplS; 
+	
+	public DocumentiAllegatiDTO buildDocumentiAllegatiDto(DocumentiAllegati d) {
+		
+		String doc = null;
+			try {
+				doc = uplS.buildUrl(d.getNomeFile());
+			} catch(Exception ignore) {}
+		
+		return DocumentiAllegatiDTO.builder() 
+				.id(d.getId())
+				.nomeFile(doc)
+				.dataCaricamento(LocalDateTime.now())
+				.formatoFile(d.getFormatoFile())
 				.build();
 				
+	}
+	
+	public List<DocumentiAllegatiDTO> buildDocumentiAllegatiDto (List <DocumentiAllegati> lD){
+		
+		return lD.stream()
+		.map(d -> buildDocumentiAllegatiDto(d))
+		.collect(Collectors.toList());
 	}
 
 }

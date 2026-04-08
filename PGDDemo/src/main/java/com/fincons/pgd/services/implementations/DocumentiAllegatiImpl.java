@@ -1,5 +1,7 @@
 package com.fincons.pgd.services.implementations;
 
+import java.time.LocalDateTime;
+
 import org.springframework.stereotype.Service;
 
 import com.fincons.pgd.dto.inputs.DocumentiAllegatiReq;
@@ -16,13 +18,20 @@ import lombok.extern.slf4j.Slf4j;
 public class DocumentiAllegatiImpl implements IDocumentiAllegatiServices {
 	
 	private final IDocumentiAllegatiRepository utR;
+	//private final IDelegaRepository delR;
 
 	public void create(DocumentiAllegatiReq req) throws Exception{
-		DocumentiAllegati DocumentiAllegati = new DocumentiAllegati();
+		DocumentiAllegati doc = new DocumentiAllegati();
+		doc.setDataCaricamento(LocalDateTime.now());
+		
+		//Delega delega = 
+		
+		//doc.setDelega(req.getIdDelega());
+		doc.setFormatoFile(req.getFormatoFile());
+		doc.setPathBucket(null);
 		
 		
-		
-		utR.save(DocumentiAllegati);
+		utR.save(doc);
 		
 	}
 }
