@@ -8,10 +8,16 @@
        drop constraint if exists FKalxcwgpdmivy7p7llwvyaemgc;
 
     alter table if exists associativautenteprofilo 
+       drop constraint if exists FKixjc37a3d0jhsob759gqih1bn;
+
+    alter table if exists associativautenteprofilo 
        drop constraint if exists FKlk1oaftqb8jugv2rmiglabamp;
 
     alter table if exists associativautenteprofilo 
        drop constraint if exists FK7vubn1vyoas8mtjw9ofv28le6;
+
+    alter table if exists delega 
+       drop constraint if exists FK245vyld9ifjaw353ojn9yn1sg;
 
     alter table if exists delega 
        drop constraint if exists FK1mmeaobkuv245chn7shhb5ih1;
@@ -47,6 +53,8 @@
     drop table if exists delega cascade;
 
     drop table if exists messaggi_sistema cascade;
+
+    drop table if exists operatore cascade;
 
     drop table if exists profilo cascade;
 

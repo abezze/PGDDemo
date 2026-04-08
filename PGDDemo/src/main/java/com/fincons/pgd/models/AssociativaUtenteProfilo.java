@@ -33,6 +33,10 @@ public class AssociativaUtenteProfilo {
     @ManyToOne
     @JoinColumn(name = "idProfilo_FK")
     private Profilo profilo;
+    
+    @ManyToOne
+    @JoinColumn(name = "idOperatore_FK")
+    private Operatore operatore;
 
     private LocalDateTime dataAbilitazione;
     private Boolean flagAbilitazione;

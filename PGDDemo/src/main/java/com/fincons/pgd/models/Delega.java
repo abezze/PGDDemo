@@ -42,6 +42,10 @@ public class Delega {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "idScenario_FK")
     private Scenario scenario;
+    
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "idOperatore") // operatore che ha gestito la delega
+    private Operatore operatore;
 
     
     private LocalDate dataInizioValidita;
