@@ -2,13 +2,12 @@ package com.fincons.pgd.utilities;
 
 import java.time.LocalDateTime;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Component;
 
 import com.fincons.pgd.dto.outputs.DocumentiAllegatiDTO;
 import com.fincons.pgd.models.DocumentiAllegati;
-import com.fincons.pgd.models.services.interfaces.IUploadServices;
+import com.fincons.pgd.services.interfaces.IUploadServices;
 
 import lombok.RequiredArgsConstructor;
 
@@ -38,7 +37,7 @@ public class DocumentiAllegatiMapper {
 		
 		return lD.stream()
 		.map(d -> buildDocumentiAllegatiDto(d))
-		.collect(Collectors.toList());
+		.toList();
 	}
 
 }

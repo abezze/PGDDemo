@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.fincons.pgd.models.services.interfaces.IMessaggioServices;
-import com.fincons.pgd.models.services.interfaces.IUploadServices;
 import com.fincons.pgd.response.Resp;
+import com.fincons.pgd.services.interfaces.IMessaggioServices;
+import com.fincons.pgd.services.interfaces.IUploadServices;
 
 import lombok.RequiredArgsConstructor;
 
@@ -27,15 +27,12 @@ public class UploadController {
 			@RequestParam MultipartFile file,
 			@RequestParam Long id) {
 		Resp r = new Resp();
-		HttpStatus status = HttpStatus.OK;
+		
 		try {
-			 /*
-			   Test del content type:
-						PNG	image/png
-						JPG	image/jpeg
-						GIF	image/gif
-			  */
-			 if (file.getContentType() == null || !file.getContentType().startsWith("doc/")) {
+			
+			String contentType = file.getContentType();
+
+			if (contentType == null || !contentType.startsWith("doc/")) {
 				 r.setMsg(msgS.get("upload_invalid"));
 				 return ResponseEntity.badRequest().body(r);	            
 			 }

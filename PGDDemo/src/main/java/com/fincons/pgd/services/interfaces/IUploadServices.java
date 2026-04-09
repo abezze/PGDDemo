@@ -1,4 +1,4 @@
-package com.fincons.pgd.models.services.interfaces;
+package com.fincons.pgd.services.interfaces;
 
 import org.springframework.web.multipart.MultipartFile;
 

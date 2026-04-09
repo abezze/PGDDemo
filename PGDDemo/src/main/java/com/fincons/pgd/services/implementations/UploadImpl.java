@@ -17,9 +17,9 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.fincons.pgd.exceptions.PGDException;
 import com.fincons.pgd.models.DocumentiAllegati;
-import com.fincons.pgd.models.services.interfaces.IMessaggioServices;
-import com.fincons.pgd.models.services.interfaces.IUploadServices;
 import com.fincons.pgd.repositories.IDocumentiAllegatiRepository;
+import com.fincons.pgd.services.interfaces.IMessaggioServices;
+import com.fincons.pgd.services.interfaces.IUploadServices;
 
 import lombok.extern.slf4j.Slf4j;
 

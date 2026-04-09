@@ -7,8 +7,8 @@ import org.springframework.stereotype.Service;
 
 import com.fincons.pgd.models.MessageID;
 import com.fincons.pgd.models.Messaggi;
-import com.fincons.pgd.models.services.interfaces.IMessaggioServices;
 import com.fincons.pgd.repositories.IMessaggiRepository;
+import com.fincons.pgd.services.interfaces.IMessaggioServices;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

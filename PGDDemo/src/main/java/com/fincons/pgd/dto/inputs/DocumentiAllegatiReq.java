@@ -2,9 +2,6 @@ package com.fincons.pgd.dto.inputs;
 
 import java.time.LocalDateTime;
 
-import com.fincons.pgd.models.Delega;
-import com.fincons.pgd.models.TipologiaDocumento;
-
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;

@@ -1,5 +1,7 @@
 package com.fincons.pgd.utilities;
 
+import java.util.List;
+
 import com.fincons.pgd.dto.outputs.UtenteDTO;
 import com.fincons.pgd.models.Utente;
 
@@ -16,6 +18,13 @@ public class UtenteMapper {
 				.flagAccettazioneProxy(u.getFlagAccettazioneProxy())
 				.build();
 				
+	}
+	
+	public static List<UtenteDTO> buildUtenteDto (List<Utente> lU){
+		
+		return lU.stream()
+				.map(u -> buildUtenteDto(u))
+				.toList();
 	}
 
 }

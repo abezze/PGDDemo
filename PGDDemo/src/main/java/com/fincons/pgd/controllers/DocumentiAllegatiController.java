@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.fincons.pgd.dto.inputs.DocumentiAllegatiReq;
-import com.fincons.pgd.models.services.interfaces.IDocumentiAllegatiServices;
-import com.fincons.pgd.models.services.interfaces.IMessaggioServices;
 import com.fincons.pgd.response.Resp;
+import com.fincons.pgd.services.interfaces.IDocumentiAllegatiServices;
+import com.fincons.pgd.services.interfaces.IMessaggioServices;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

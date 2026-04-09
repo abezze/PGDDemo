@@ -2,15 +2,16 @@ package com.fincons.pgd.controllers;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.fincons.pgd.dto.inputs.UtenteReq;
-import com.fincons.pgd.models.services.interfaces.IMessaggioServices;
-import com.fincons.pgd.models.services.interfaces.IUtenteServices;
 import com.fincons.pgd.response.Resp;
+import com.fincons.pgd.services.interfaces.IMessaggioServices;
+import com.fincons.pgd.services.interfaces.IUtenteServices;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -36,6 +37,20 @@ public class UtenteController {
 			status = HttpStatus.BAD_REQUEST;
 		}
 		return ResponseEntity.status(status).body(r);		
+	}
+	
+	@GetMapping("/list")
+	public ResponseEntity<Object> list(){
+		Object r = new Object();
+		HttpStatus status = HttpStatus.OK;
+		try {
+			r= utS.list();
+		} catch (Exception e) {
+			r=e.getMessage();
+			status = HttpStatus.BAD_REQUEST;
+		}
+		return ResponseEntity.status(status).body(r);
+		
 	}
 
 }
