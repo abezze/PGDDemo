@@ -45,14 +45,14 @@ public class UploadImpl implements IUploadServices{
 			if (Files.notExists(uploadPath)) {
 				Files.createDirectories(uploadPath);
 			}
-		} catch (IOException e) {
-			throw new RuntimeException(msgS.get("upload_create"));
+		} catch (IOException _) {
+			throw new PGDException(msgS.get("upload_create"));
 		}
 	}
 	
 	@Transactional (rollbackFor = PGDException.class)
 	@Override
-	public String saveDoc(MultipartFile file, Long id) throws Exception {
+	public String saveDoc(MultipartFile file, Long id) throws PGDException {
 		log.debug("saveDoc {}", id);
 		
 		Assert.isTrue(!file.isEmpty(),() -> msgS.get("upload_empty")); // control file loaded
@@ -79,15 +79,15 @@ public class UploadImpl implements IUploadServices{
             	.orElseThrow(() -> new PGDException(msgS.get("doc_ntfnd")));	
             v.setNomeFile(uniqueName);
             
-        } catch (IOException e) {
-            throw new RuntimeException(msgS.get("upload_save_error"));
+        } catch (Exception _) {
+            throw new PGDException(msgS.get("upload_save_error"));
         }
     
         return uniqueName;
 	}
 
 	@Override
-	public void removeDoc(String filename) throws Exception {
+	public void removeDoc(String filename) throws PGDException {
 		// TODO Auto-generated method stub
 		
 	}
