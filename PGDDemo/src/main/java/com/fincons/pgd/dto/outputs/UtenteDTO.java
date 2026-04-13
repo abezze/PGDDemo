@@ -1,15 +1,11 @@
 package com.fincons.pgd.dto.outputs;
 
-import java.util.List;
-import java.util.Set;
-
-import com.fincons.pgd.models.AssociativaUtenteProfilo;
-import com.fincons.pgd.models.Delega;
-
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+
+import java.util.List;
 
 @Getter
 @Setter
@@ -24,7 +20,7 @@ public class UtenteDTO {
     private String indirizzoEmail;
     private Boolean flagEmailCertificata;
     private Boolean flagAccettazioneProxy;
-    private Set<AssociativaUtenteProfilo> profili;
-    private List<Delega> delegheConcesse;
+    //private Set<AssociativaUtenteProfiloDTO> profili;
+    private List<DelegaDTO> delegheConcesse;
 
 }
