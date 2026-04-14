@@ -15,7 +15,7 @@ public class UtenteMapper {
 				.codiceFiscale(u.getCodiceFiscale())
 				.indirizzoEmail(u.getIndirizzoEmail())
 				.flagEmailCertificata(u.getFlagEmailCertificata())
-				.flagAccettazioneProxy(u.getFlagAccettazioneProxy())
+				.flagAccettazionePolicy(u.getFlagAccettazionePolicy())
 				.build();
 				
 	}
