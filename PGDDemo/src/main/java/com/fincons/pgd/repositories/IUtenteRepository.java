@@ -7,5 +7,7 @@ import com.fincons.pgd.models.Utente;
 
 @Repository
 public interface IUtenteRepository extends JpaRepository<Utente, Long>{
+	
+	Utente findByIdPNR(String idPNR);
 
 }

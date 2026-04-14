@@ -1,20 +1,21 @@
 package com.fincons.pgd.services.implementations;
 
+import static com.fincons.pgd.utilities.DelegaMapper.buildDelegaDto;
+
+import java.util.List;
+
+import org.springframework.dao.OptimisticLockingFailureException;
+import org.springframework.stereotype.Service;
+
 import com.fincons.pgd.dto.inputs.DelegaReq;
 import com.fincons.pgd.dto.outputs.DelegaDTO;
 import com.fincons.pgd.exceptions.PGDException;
 import com.fincons.pgd.models.Delega;
 import com.fincons.pgd.repositories.IDelegaRepository;
 import com.fincons.pgd.services.interfaces.IDelegaServices;
+
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.dao.OptimisticLockingFailureException;
-import org.springframework.stereotype.Service;
-
-import java.util.List;
-import java.util.Optional;
-
-import static com.fincons.pgd.utilities.DelegaMapper.buildDelegaDto;
 
 @RequiredArgsConstructor
 @Slf4j
