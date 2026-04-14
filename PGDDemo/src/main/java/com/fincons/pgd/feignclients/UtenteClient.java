@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 import com.fincons.pgd.models.Utente;
 
-@FeignClient(name = "utente-service", url = "http://localhost:8082")
+@FeignClient(name = "utente-service", url = "http://localhost:9070")
 public interface UtenteClient {
 	
 	@GetMapping("/deleghe")
