@@ -17,7 +17,7 @@ public class DocumentiAllegatiMapper {
 	
 	private final IUploadServices uplS; 
 	
-	public DocumentiAllegatiDTO buildDocumentiAllegatiDto(DocumentiAllegati d) {
+	public  DocumentiAllegatiDTO buildDocumentiAllegatiDto(DocumentiAllegati d) {
 		
 		String doc = null;
 			try {
@@ -33,7 +33,7 @@ public class DocumentiAllegatiMapper {
 				
 	}
 	
-	public List<DocumentiAllegatiDTO> buildDocumentiAllegatiDto (List <DocumentiAllegati> lD){
+	public  List<DocumentiAllegatiDTO> buildDocumentiAllegatiDto (List <DocumentiAllegati> lD){
 		
 		return lD.stream()
 		.map(d -> buildDocumentiAllegatiDto(d))

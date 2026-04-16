@@ -58,8 +58,10 @@ public class DelegaController {
         } catch (Exception e){
 
         }
-        return Flux.just(
-                delega
-        );
+        if (delega!=null) {
+	        return Flux.just(
+	                delega
+	        );
+        } else return null;
     }
 }
