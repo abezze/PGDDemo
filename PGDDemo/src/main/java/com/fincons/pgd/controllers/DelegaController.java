@@ -45,6 +45,7 @@ public class DelegaController {
     @GetMapping(value = "/get-delegation-data",
                 produces = MediaType.APPLICATION_JSON_VALUE)
     public Flux<DelegaDTO> getDelega(@RequestHeader Map<String, String> headers){
+    	log.debug(" getDelega" );
         if (headers!=null && !headers.isEmpty())
         {  //	Authorization
             String authorization = headers.get("Authorization");

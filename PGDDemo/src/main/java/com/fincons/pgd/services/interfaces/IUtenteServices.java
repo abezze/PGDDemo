@@ -12,5 +12,6 @@ public interface IUtenteServices {
 	
 	void create(UtenteReq req)throws IllegalArgumentException,	OptimisticLockingFailureException, PGDException;
 	List<UtenteDTO> list() throws Exception;
+	UtenteDTO findByIdPNR(String idPNR) throws Exception;
 
 }
