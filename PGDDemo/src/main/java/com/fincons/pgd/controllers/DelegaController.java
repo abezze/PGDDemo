@@ -49,7 +49,7 @@ public class DelegaController {
         if (headers!=null && !headers.isEmpty())
         {  //	Authorization
             String authorization = headers.get("Authorization");
-            String DPoP = headers.get("DPoP");
+            String dPoP = headers.get("DPoP");
             //TODO
         }
         DelegaDTO delega = null;

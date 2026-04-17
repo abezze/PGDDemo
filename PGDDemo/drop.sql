@@ -40,6 +40,9 @@
     alter table if exists documentiallegati 
        drop constraint if exists FK8ges02h5rql6919vvspvlubw2;
 
+    alter table if exists logproxy 
+       drop constraint if exists FKd4yfr967dni97n89p3t9opkmx;
+
     alter table if exists storicodelega 
        drop constraint if exists FK67ity6goblm8ljes857uvxv0n;
 
@@ -65,6 +68,8 @@
     drop table if exists delega cascade;
 
     drop table if exists documentiallegati cascade;
+
+    drop table if exists logproxy cascade;
 
     drop table if exists messaggi_sistema cascade;
 
