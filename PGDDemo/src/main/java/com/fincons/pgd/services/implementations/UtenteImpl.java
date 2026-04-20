@@ -32,6 +32,12 @@ public class UtenteImpl implements IUtenteServices {
 		utente.setNome(req.getNome());
 		utente.setCodiceFiscale(req.getCodiceFiscale());
 		utente.setIndirizzoEmail(req.getIndirizzoEmail());
+		utente.setDataNascita(req.getDataNascita());
+		utente.setFlagAccettazionePolicy(req.getFlagAccettazionePolicy());
+		utente.setFlagEmailCertificata(req.getFlagEmailCertificata());
+		utente.setIdPNR(req.getIdPNR());
+		utente.setLuogoDiNascita(req.getLuogoDiNascita());
+		utente.setResidenza(req.getResidenza());
 		
 		utR.save(utente);
 		

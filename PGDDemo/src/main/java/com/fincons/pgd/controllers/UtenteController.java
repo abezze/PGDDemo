@@ -28,16 +28,13 @@ public class UtenteController {
 	
 	@PostMapping("/create")
 	public ResponseEntity<Resp> create(@RequestBody(required = true)  UtenteReq req){
-		Resp r = new Resp();
-		HttpStatus status = HttpStatus.OK;
-		try {
-			utS.create(req);
-			r.setMsg(msgS.get("rest_created"));
-		} catch (Exception e) {
-			r.setMsg(e.getMessage());
-			status = HttpStatus.BAD_REQUEST;
-		}
-		return ResponseEntity.status(status).body(r);		
+		
+	    utS.create(req);
+
+	    Resp r = new Resp();
+	    r.setMsg(msgS.get("rest_created"));
+
+	    return ResponseEntity.status(HttpStatus.CREATED).body(r);
 	}
 	
 	@GetMapping("/list")
