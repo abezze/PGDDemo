@@ -9,7 +9,7 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 
-	<groupId>com.fincons.pgd.pgddemo</groupId>
+	<groupId>com.fincons.pgd</groupId>
 	<artifactId>PGDDemo</artifactId>
 	<name>PGDDemo module</name>
 	<description/>

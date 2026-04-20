@@ -38,6 +38,16 @@
 
 	<modules>
 		<module>PGDDemo</module>
+<!--		<module>amministrazione</module>-->
+<!--		<module>batch-operation-async</module>-->
+<!--		<module>comuni</module>-->
+<!--		<module>documenti</module>-->
+<!--		<module>reportistica</module>-->
+<!--		<module>spesadelega</module>-->
+		<module>utenti</module>
+<!--		<module>validita-delega</module>-->
+<!--		<module>lib-security</module>-->
+<!--		<module>lib-utility</module>-->
 	</modules>
 
 	<dependencyManagement>
