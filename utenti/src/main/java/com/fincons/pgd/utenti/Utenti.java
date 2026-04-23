@@ -1,4 +1,4 @@
-package com.fincons.pgd;
+package com.fincons.pgd.utenti;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
