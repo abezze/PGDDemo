@@ -127,6 +127,10 @@
             <artifactId>org.eclipse.jgit</artifactId>
             <version>7.4.0.202509020913-r</version>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.ai</groupId>
+            <artifactId>spring-ai-starter-model-chat-memory-repository-jdbc</artifactId>
+        </dependency>
 
 
 	    

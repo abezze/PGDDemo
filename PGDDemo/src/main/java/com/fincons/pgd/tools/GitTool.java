@@ -1,24 +1,36 @@
 package com.fincons.pgd.tools;
 
-import java.io.IOException;
-import java.nio.file.Path;
-import java.util.List;
 
 import org.eclipse.jgit.api.Git;
 import org.eclipse.jgit.api.Status;
 import org.eclipse.jgit.api.errors.GitAPIException;
+import org.eclipse.jgit.diff.DiffFormatter;
+import org.eclipse.jgit.lib.Constants;
+import org.eclipse.jgit.lib.ObjectReader;
 import org.eclipse.jgit.lib.Repository;
 import org.eclipse.jgit.revwalk.RevCommit;
+import org.eclipse.jgit.revwalk.RevWalk;
 import org.eclipse.jgit.storage.file.FileRepositoryBuilder;
+import org.eclipse.jgit.treewalk.AbstractTreeIterator;
+import org.eclipse.jgit.treewalk.CanonicalTreeParser;
 import org.springframework.ai.tool.annotation.Tool;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
+
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Path;
 
 @Component
 public class GitTool {
 
+    @Value("${git.repository.path}")
+    private String repositoryPath;
+
     @Tool(description = "Restituisce il branch Git corrente del repository")
-    public String getCurrentBranch(String repositoryPath) {
-        System.out.println(">>> GIT current branch chiamato <<<");
+    public String getCurrentBranch() {
+        System.out.println(">>> GIT current branch chiamato repositoryPath<<< " + repositoryPath);
         try (Repository repository = openRepository(repositoryPath)) {
             return repository.getBranch();
         } catch (IOException e) {
@@ -27,8 +39,8 @@ public class GitTool {
     }
 
     @Tool(description = "Restituisce gli ultimi commit del repository Git")
-    public String getRecentCommits(String repositoryPath) {
-
+    public String getRecentCommits() {
+        System.out.println(">>> GIT getRecentCommits chiamato repositoryPath<<<" + repositoryPath);
         try (Repository repository = openRepository(repositoryPath);
              Git git = new Git(repository)) {
 
@@ -52,8 +64,8 @@ public class GitTool {
     }
 
     @Tool(description = "Restituisce lo stato corrente del repository Git, indicando file modificati, aggiunti, rimossi e non tracciati")
-    public String getGitStatus(String repositoryPath) {
-
+    public String getGitStatus() {
+        System.out.println(">>> GIT getGitStatus chiamato repositoryPath <<< " +repositoryPath);
         try (Repository repository = openRepository(repositoryPath);
              Git git = new Git(repository)) {
 
@@ -88,12 +100,73 @@ public class GitTool {
         }
     }
 
-    private Repository openRepository(String repositoryPath) throws IOException {
+    @Tool(description = "Restituisce il contenuto completo delle modifiche non committate nel repository Git")
+    public String getDiff() {
+        System.out.println(">>> GIT getDiff chiamato su repositoryPath : <<< " +repositoryPath);
+        try (Repository repository = openRepository(repositoryPath);
+             RevWalk revWalk = new RevWalk(repository)) {
 
-        return new FileRepositoryBuilder()
-                .setGitDir(Path.of(repositoryPath, ".git").toFile())
+            RevCommit headCommit = revWalk.parseCommit(
+                    repository.resolve(Constants.HEAD));
+
+            AbstractTreeIterator oldTree = prepareTreeParser(
+                    repository,
+                    headCommit.getTree().getId());
+
+            ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+
+            try (DiffFormatter formatter = new DiffFormatter(outputStream)) {
+
+                formatter.setRepository(repository);
+
+                formatter.format(
+                        oldTree,
+                        new org.eclipse.jgit.treewalk.FileTreeIterator(repository));
+
+            }
+
+            String diff = outputStream.toString(StandardCharsets.UTF_8);
+
+            if (diff.isBlank()) {
+                return "Non ci sono modifiche nel working tree.";
+            }
+
+            return diff;
+
+        } catch (IOException e) {
+            return "Errore nel recupero del diff: " + e.getMessage();
+        }
+    }
+
+    private Repository openRepository(String repositoryPath) throws IOException {
+        Repository repository =  new FileRepositoryBuilder()
+                .setWorkTree(Path.of(repositoryPath).toFile())
                 .readEnvironment()
                 .findGitDir()
                 .build();
+        System.out.println(">>> repositoryPath = " + repositoryPath);
+        System.out.println(">>> gitDir         = " + repository.getDirectory());
+        System.out.println(">>> workTree       = " + repository.getWorkTree());
+        System.out.println(">>> isBare         = " + repository.isBare());
+        System.out.println(">>> branch         = " + repository.getBranch());
+
+        return repository;
+    }
+
+    private AbstractTreeIterator prepareTreeParser(
+            Repository repository,
+            org.eclipse.jgit.lib.AnyObjectId objectId) throws IOException {
+
+        try (RevWalk walk = new RevWalk(repository)) {
+
+            RevCommit commit = walk.parseCommit(objectId);
+            CanonicalTreeParser treeParser = new CanonicalTreeParser();
+
+            try (ObjectReader reader = repository.newObjectReader()) {
+                treeParser.reset(reader, commit.getTree());
+            }
+
+            return treeParser;
+        }
     }
 }
