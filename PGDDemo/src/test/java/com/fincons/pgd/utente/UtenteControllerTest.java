@@ -50,7 +50,7 @@ public class UtenteControllerTest {
 		ute.setResidenza("Viganò");
 		
 		ResponseEntity<Resp> resp = uteC.create(ute);
-		assertEquals(HttpStatus.OK, resp.getStatusCode());
+		assertEquals(HttpStatus.CREATED, resp.getStatusCode());
 		Resp r = (Resp)resp.getBody();
 		
 		Assertions.assertThat(r.getMsg()).isEqualTo("rest_created");

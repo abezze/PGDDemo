@@ -45,7 +45,7 @@ public class UploadImpl implements IUploadServices{
 			if (Files.notExists(uploadPath)) {
 				Files.createDirectories(uploadPath);
 			}
-		} catch (IOException _) {
+		} catch (IOException e2) {
 			throw new PGDException(msgS.get("upload_create"));
 		}
 	}
@@ -79,7 +79,7 @@ public class UploadImpl implements IUploadServices{
             	.orElseThrow(() -> new PGDException(msgS.get("doc_ntfnd")));	
             v.setNomeFile(uniqueName);
             
-        } catch (Exception _) {
+        } catch (Exception e3) {
             throw new PGDException(msgS.get("upload_save_error"));
         }
     

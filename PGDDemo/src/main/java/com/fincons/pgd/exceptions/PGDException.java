@@ -15,8 +15,9 @@ public class PGDException  extends RuntimeException{
 	}
 
 	public PGDException(String message) {
-		log.debug(message);
+
 		super(message);
+        log.debug(message);
 	}
 
 }

@@ -2,6 +2,7 @@ package com.fincons.pgd.controllers;
 
 import com.fincons.pgd.tools.DateTimeTool;
 import com.fincons.pgd.tools.GitTool;
+import com.fincons.pgd.tools.MavenTool;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.client.advisor.MessageChatMemoryAdvisor;
 import org.springframework.ai.chat.memory.ChatMemory;
@@ -19,12 +20,14 @@ public class AiController {
     private final DateTimeTool dateTimeTool;
     private final GitTool gitTool;
     private final ChatMemory chatMemory;
+    private final MavenTool mavenTool;
 
-    public AiController(ChatClient.Builder chatClientBuilder, DateTimeTool dateTimeTool, GitTool gitTool, ChatMemory chatMemory) {
+    public AiController(ChatClient.Builder chatClientBuilder, DateTimeTool dateTimeTool, GitTool gitTool, ChatMemory chatMemory, MavenTool mavenTool) {
         this.chatClient = chatClientBuilder.build();
         this.dateTimeTool = dateTimeTool;
         this.gitTool = gitTool;
         this.chatMemory = chatMemory;
+        this.mavenTool = mavenTool;
     }
 
     @GetMapping("/chat")
@@ -50,7 +53,7 @@ public class AiController {
                 Non inventare mai informazioni sul repository.
                 """)
                 .user(message)
-                .tools(dateTimeTool, gitTool)
+                .tools(dateTimeTool, gitTool, mavenTool)
                 .advisors(MessageChatMemoryAdvisor.builder(chatMemory).build())
                 .advisors(a -> a.param(
                         ChatMemory.CONVERSATION_ID,
