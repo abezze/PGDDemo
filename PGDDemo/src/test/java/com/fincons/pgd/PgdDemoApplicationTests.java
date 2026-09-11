@@ -9,12 +9,12 @@ import org.springframework.boot.test.context.SpringBootTest;
 import com.fincons.pgd.delega.DelegaControllerTest;
 import com.fincons.pgd.utente.UtenteControllerTest;
 
-@Suite
+/*@Suite
 @SuiteDisplayName("PGD ordered Test Suite")
 @SelectClasses({
 	UtenteControllerTest.class,
 	DelegaControllerTest.class
-})
+})*/
 
 
 

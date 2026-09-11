@@ -2,6 +2,7 @@ package com.fincons.pgd.utente;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import com.fincons.pgd.utilities.GeneratoreCodiceFiscaleTest;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
@@ -33,11 +34,13 @@ public class UtenteControllerTest {
 		log.debug("create utente");
 		
 		UtenteReq ute = new UtenteReq();
-		ute.setCodiceFiscale("BZZGNN38M19B213A");
+
+        String cf = GeneratoreCodiceFiscaleTest.generaCodiceFiscaleCasuale();
+		ute.setCodiceFiscale(cf);
 		ute.setCognome("Bezze");
 		ute.setNome("Giovanni");
 		try {
-			ute.setDataNascita(stringToDate("02/02/2025"));
+			ute.setDataNascita(stringToDate("19/08/1938"));
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
