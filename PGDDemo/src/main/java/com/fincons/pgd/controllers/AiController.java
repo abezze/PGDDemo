@@ -3,6 +3,7 @@ package com.fincons.pgd.controllers;
 import com.fincons.pgd.tools.DateTimeTool;
 import com.fincons.pgd.tools.GitTool;
 import com.fincons.pgd.tools.MavenTool;
+import com.fincons.pgd.tools.PomTool;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.client.advisor.MessageChatMemoryAdvisor;
 import org.springframework.ai.chat.memory.ChatMemory;
@@ -21,13 +22,15 @@ public class AiController {
     private final GitTool gitTool;
     private final ChatMemory chatMemory;
     private final MavenTool mavenTool;
+    private final PomTool pomTool;
 
-    public AiController(ChatClient.Builder chatClientBuilder, DateTimeTool dateTimeTool, GitTool gitTool, ChatMemory chatMemory, MavenTool mavenTool) {
+    public AiController(ChatClient.Builder chatClientBuilder, DateTimeTool dateTimeTool, GitTool gitTool, ChatMemory chatMemory, MavenTool mavenTool, PomTool pomTool) {
         this.chatClient = chatClientBuilder.build();
         this.dateTimeTool = dateTimeTool;
         this.gitTool = gitTool;
         this.chatMemory = chatMemory;
         this.mavenTool = mavenTool;
+        this.pomTool = pomTool;
     }
 
     @GetMapping("/chat")
@@ -53,7 +56,7 @@ public class AiController {
                 Non inventare mai informazioni sul repository.
                 """)
                 .user(message)
-                .tools(dateTimeTool, gitTool, mavenTool)
+                .tools(dateTimeTool, gitTool, mavenTool, pomTool)
                 .advisors(MessageChatMemoryAdvisor.builder(chatMemory).build())
                 .advisors(a -> a.param(
                         ChatMemory.CONVERSATION_ID,
