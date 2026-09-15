@@ -23,6 +23,9 @@ public class MavenTool {
 
     private final Path projectPath;
 
+    @Value("${git.repository.path}")
+    private String repositoryPath;
+
     public MavenTool(
             @Value("${git.repository.path}") String projectPath ) {
         projectPath = projectPath +  "/PGDDemo";
@@ -37,17 +40,31 @@ public class MavenTool {
             """)
     public String runTests() {
 
+        String os = System.getProperty("os.name").toLowerCase();
+
+        boolean windows = os.contains("win");
+
+        String command;
+        String shell;
+
+        if (windows) {
+            shell = "cmd";
+            command = "mvnw.cmd";
+        } else {
+            shell = "sh";
+            command = "./mvnw";
+        }
+
         System.out.println(">>> Maven runTests  <<< ");
         try {
             ProcessBuilder processBuilder = new ProcessBuilder(
-                    "cmd",
-                    "/c",
-                    "mvnw.cmd",
-                    "test"
+                    shell,
+                    windows ? "/c" : "-c",
+                    command + " test"
             );
 
             processBuilder
-                    .directory(new java.io.File("C:/Users/Betacom/IdeaProjects/PGDDemo"))
+                    .directory(new java.io.File(repositoryPath))
                     .redirectErrorStream(true);
 
             Process process = processBuilder.start();
@@ -108,18 +125,31 @@ public class MavenTool {
             """)
     public MavenCoverageResult  verifyCoverage() {
 
+        String os = System.getProperty("os.name").toLowerCase();
+
+        boolean windows = os.contains("win");
+
+        String command;
+        String shell;
+
+        if (windows) {
+            shell = "cmd";
+            command = "mvnw.cmd";
+        } else {
+            shell = "sh";
+            command = "./mvnw";
+        }
         System.out.println(">>> Maven verify Coverage  <<< ");
         try {
             ProcessBuilder processBuilder = new ProcessBuilder(
-                    "cmd",
-                    "/c",
-                    "mvnw.cmd",
-                    "verify",
+                    shell,
+                    windows ? "/c" : "-c",
+                    command + " verify" ,
                     "-Dspring.devtools.restart.enabled=false"
             );
 
             processBuilder
-                    .directory(new java.io.File("C:/Users/Betacom/IdeaProjects/PGDDemo"))
+                    .directory(new java.io.File(repositoryPath))
                     .redirectErrorStream(true);
 
             Process process = processBuilder.start();

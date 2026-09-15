@@ -1,0 +1,16 @@
+services:
+  pgddemo:
+    image: pgddemo:1.0
+    container_name: pgddemo
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    ports:
+      - "9070:9070"
+
+    volumes:
+      - "C:/Users/Betacom/IdeaProjects/PGDDemo:/app/repository"
+
+    environment:
+      GIT_REPOSITORY_PATH: /app/repository
