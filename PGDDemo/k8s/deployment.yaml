@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: pgddemo
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: pgddemo
+
+  template:
+    metadata:
+      labels:
+        app: pgddemo
+
+    spec:
+      containers:
+        - name: pgddemo
+          image: acrpgddemo2026.azurecr.io/pgddemo:2.0
+
+          ports:
+            - containerPort: 9070
+
+          env:
+            - name: GIT_REPOSITORY_PATH
+              value: /app/repository
+            - name: SPRING_PROFILES_ACTIVE
+              value: azure

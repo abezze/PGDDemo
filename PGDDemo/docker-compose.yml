@@ -13,4 +13,5 @@ services:
       - "C:/Users/Betacom/IdeaProjects/PGDDemo:/app/repository"
 
     environment:
+      SPRING_PROFILES_ACTIVE: docker
       GIT_REPOSITORY_PATH: /app/repository

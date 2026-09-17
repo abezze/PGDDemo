@@ -6,4 +6,4 @@ COPY target/PGDDemo-0.0.1-SNAPSHOT.jar app.jar
 
 EXPOSE 9070
 
-ENTRYPOINT ["java", "-jar", "app.jar", "--spring.profiles.active=docker"]
+ENTRYPOINT ["java", "-jar", "app.jar"]
