@@ -11,10 +11,7 @@ public class PgdDemoApplication {
                 "AI_DASHSCOPE_API_KEY presente: " +
                         (System.getenv("AI_DASHSCOPE_API_KEY") != null)
         );
-        System.out.println(
-                "AI_DASHSCOPE_API_KEY presente: " +
-                        (System.getenv("AI_DASHSCOPE_API_KEY") )
-        );
+
         SpringApplication.run(PgdDemoApplication.class, args);
 	}
  

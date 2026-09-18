@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: pgddemo
-          image: acrpgddemo2026.azurecr.io/pgddemo:2.0
+          image: acrpgddemo2026.azurecr.io/pgddemo:3.2
 
           ports:
             - containerPort: 9070
@@ -27,5 +27,41 @@ spec:
           env:
             - name: GIT_REPOSITORY_PATH
               value: /app/repository
+
             - name: SPRING_PROFILES_ACTIVE
               value: azure
+
+            - name: AI_DASHSCOPE_API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: pgddemo-secrets
+                  key: AI_DASHSCOPE_API_KEY
+
+            - name: GIT_HOST
+              value: "github.com"
+
+            - name: GIT_REPOSITORY
+              value: "abezze/PGDDemo.git"
+
+            - name: GIT_BRANCH
+              value: "master"
+
+            - name: GIT_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: pgddemo-git
+                  key: username
+
+            - name: GIT_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: pgddemo-git
+                  key: token
+
+          volumeMounts:
+            - name: repository
+              mountPath: /app/repository
+
+      volumes:
+        - name: repository
+          emptyDir: {}
