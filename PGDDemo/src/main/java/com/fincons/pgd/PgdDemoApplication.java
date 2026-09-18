@@ -7,7 +7,15 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class PgdDemoApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(PgdDemoApplication.class, args);
+        System.out.println(
+                "AI_DASHSCOPE_API_KEY presente: " +
+                        (System.getenv("AI_DASHSCOPE_API_KEY") != null)
+        );
+        System.out.println(
+                "AI_DASHSCOPE_API_KEY presente: " +
+                        (System.getenv("AI_DASHSCOPE_API_KEY") )
+        );
+        SpringApplication.run(PgdDemoApplication.class, args);
 	}
  
 }
