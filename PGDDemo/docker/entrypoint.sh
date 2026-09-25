@@ -13,14 +13,17 @@ echo "Git host: ${GIT_HOST}"
 echo "Git repository: ${GIT_REPOSITORY}"
 echo "Git branch: ${GIT_BRANCH}"
 
-mkdir -p "${REPOSITORY_DIR}"
+
+# La directory è un volume emptyDir.
+# Eliminiamo eventuali contenuti precedenti.
+rm -rf "${REPOSITORY_DIR:?}"/* "${REPOSITORY_DIR:?}"/.[!.]* "${REPOSITORY_DIR:?}"/..?* 2>/dev/null || true
 
 git clone \
     --branch "${GIT_BRANCH}" \
     "https://${GIT_USERNAME}:${GIT_TOKEN}@${GIT_HOST}/${GIT_REPOSITORY}" \
     "${REPOSITORY_DIR}"
 
-chmod +x "${REPOSITORY_DIR}/PGDDemo/mvnw"
+chmod +x "${REPOSITORY_DIR}/mvnw"
 
 echo "Repository cloned successfully."
 

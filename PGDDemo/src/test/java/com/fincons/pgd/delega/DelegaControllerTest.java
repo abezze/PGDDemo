@@ -10,9 +10,12 @@ import org.springframework.boot.test.context.SpringBootTest;
 import com.fincons.pgd.controllers.DelegaController;
 
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.test.context.ActiveProfiles;
 
 @Slf4j
 @SpringBootTest
+@ActiveProfiles("test")
+
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class DelegaControllerTest {
 	

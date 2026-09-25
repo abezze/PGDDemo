@@ -34,6 +34,7 @@
 		<project.build.sourceEncoding>${character.encoding}</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>${character.encoding}</project.reporting.outputEncoding>
 		<spring-boot.version>4.0.5</spring-boot.version>
+        <maven-compiler-plugin.version>3.13.0</maven-compiler-plugin.version>
 	</properties>
 
 	<modules>

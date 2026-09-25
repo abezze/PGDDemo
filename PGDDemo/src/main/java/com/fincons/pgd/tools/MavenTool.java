@@ -60,7 +60,7 @@ public class MavenTool {
             ProcessBuilder processBuilder = new ProcessBuilder(
                     shell,
                     windows ? "/c" : "-c",
-                    command + " test"
+                    command + " test " + "-Dspring.profiles.active=test -e"
             );
 
             processBuilder
@@ -144,8 +144,7 @@ public class MavenTool {
             ProcessBuilder processBuilder = new ProcessBuilder(
                     shell,
                     windows ? "/c" : "-c",
-                    command + " verify" ,
-                    "-Dspring.devtools.restart.enabled=false"
+                    command + " verify -Dspring.devtools.restart.enabled=false -Dspring.profiles.active=test -e"
             );
 
             processBuilder

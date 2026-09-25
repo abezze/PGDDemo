@@ -1,0 +1,38 @@
+# Il DTO di input per la creazione
+input UtenteReq {
+    nome: String!
+    cognome: String!
+    codiceFiscale: String!
+    dataNascita: String!
+    idPNR: String!
+    residenza: String!
+    luogoDiNascita: String!
+    indirizzoEmail: String!
+}
+
+# L'oggetto di risposta per la conferma della creazione
+type Resp {
+    msg: String
+}
+
+# 1. DEFINISCI IL TIPO SPECIFICO (Sostituisci i campi con quelli reali del tuo DTO)
+type UtenteDTO {
+    id: ID
+    nome: String
+    cognome: String
+    codiceFiscale: String
+    dataNascita: String
+    idPNR: String
+    residenza: String
+    luogoDiNascita: String
+    indirizzoEmail: String
+}
+
+type Query {
+    # 2. ORA LA QUERY RESTITUISCE LA LISTA TIPIZZATA DI UTENTI
+    list: [UtenteDTO]!
+}
+
+type Mutation {
+    create(req: UtenteReq!): Resp
+}

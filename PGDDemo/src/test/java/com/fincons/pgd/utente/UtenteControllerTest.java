@@ -19,9 +19,11 @@ import com.fincons.pgd.response.Resp;
 import static com.fincons.pgd.utilities.Utils.stringToDate;
 
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.test.context.ActiveProfiles;
 
 @Slf4j
 @SpringBootTest
+@ActiveProfiles("test")
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class UtenteControllerTest {
 	

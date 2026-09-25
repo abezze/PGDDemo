@@ -8,6 +8,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import com.fincons.pgd.delega.DelegaControllerTest;
 import com.fincons.pgd.utente.UtenteControllerTest;
+import org.springframework.test.context.ActiveProfiles;
 
 /*@Suite
 @SuiteDisplayName("PGD ordered Test Suite")
@@ -19,6 +20,7 @@ import com.fincons.pgd.utente.UtenteControllerTest;
 
 
 @SpringBootTest
+@ActiveProfiles("test")
 class PgdDemoApplicationTests {
 
 	@Test
