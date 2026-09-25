@@ -10,7 +10,10 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.graphql.data.method.annotation.Argument;
 import org.springframework.graphql.data.method.annotation.MutationMapping;
 import org.springframework.graphql.data.method.annotation.QueryMapping;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
@@ -23,7 +26,7 @@ public class UtenteGraphqlController {
     private final IMessaggioServices msgS;
 
     // 1. GESTIONE DELLA CREAZIONE (Ex POST REST)
-    // Il nome del metodo corrisponde a 'create' nella Mutation dello schema
+
     @MutationMapping
     public Resp create(@Argument UtenteReq req) {
         log.info("Richiesta di creazione utente in GraphQL per: {}", req.getCodiceFiscale());
@@ -39,7 +42,7 @@ public class UtenteGraphqlController {
     }
 
     // 2. GESTIONE DELLA LISTA (Ex GET REST)
-    // Il nome del metodo corrisponde a 'list' nella Query dello schema
+
     @QueryMapping
     public List<UtenteDTO> list() throws Exception {
         log.info("Richiesta lista utenti in GraphQL");
@@ -48,5 +51,15 @@ public class UtenteGraphqlController {
         // Se il service lancia una RuntimeException (es. errore di connessione al DB),
         // Spring for GraphQL intercetta l'errore da solo e lo sposta nel blocco "errors" del JSON.
         return utS.list();
+    }
+    @QueryMapping
+    public UtenteDTO findById (@Argument  String userIdPNR) throws Exception {
+        log.debug("getDelegationData userIdPNR= {}", userIdPNR);
+        Object r = new Object();
+        HttpStatus status = HttpStatus.OK;
+
+         return  utS.findByIdPNR(userIdPNR);
+
+
     }
 }

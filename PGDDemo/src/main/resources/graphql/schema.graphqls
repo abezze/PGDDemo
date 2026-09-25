@@ -31,6 +31,7 @@ type UtenteDTO {
 type Query {
     # 2. ORA LA QUERY RESTITUISCE LA LISTA TIPIZZATA DI UTENTI
     list: [UtenteDTO]!
+    findById(userIdPNR: ID!): UtenteDTO
 }
 
 type Mutation {
