@@ -1,5 +1,6 @@
 package com.fincons.pgd.dto.inputs;
 
+import com.fincons.pgd.dto.outputs.StatoDelegaDTO;
 import com.fincons.pgd.dto.outputs.UtenteDTO;
 import lombok.Getter;
 import lombok.Setter;
@@ -30,7 +31,7 @@ public class DelegaReq {
     private LocalDateTime dataVideoRegistrazione;
     private String idVideoChiamata;
 
-    // private StatoDelegaDTO statoCorrente;
+    private StatoDelegaDTO statoCorrente;
     // private TipoDelegatoDTO tipoDelegato;
 
 }

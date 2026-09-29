@@ -1,4 +1,4 @@
-resource "kubernetes_deployment" "pgddemo" {
+﻿resource "kubernetes_deployment" "pgddemo" {
   metadata {
     name      = "pgddemo"
     namespace = "default"
@@ -30,7 +30,7 @@ resource "kubernetes_deployment" "pgddemo" {
         enable_service_links            = false
         container {
           name  = "pgddemo"
-          image = "acrpgddemo2026.azurecr.io/pgddemo:4.0"
+          image = "acrpgddemo2026.azurecr.io/pgddemo:4.1"
 
           port {
             container_port = 9070

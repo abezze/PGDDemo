@@ -9,7 +9,7 @@ import java.util.List;
 
 public interface IDelegaServices {
 
-    void create(DelegaReq req)throws IllegalArgumentException, OptimisticLockingFailureException, PGDException;
+    String create(DelegaReq req)throws IllegalArgumentException, OptimisticLockingFailureException, PGDException;
     List<DelegaDTO> list() throws Exception;
     DelegaDTO findById(Long id) throws Exception;
 }

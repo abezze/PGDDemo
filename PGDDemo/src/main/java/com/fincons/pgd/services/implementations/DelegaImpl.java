@@ -2,8 +2,13 @@ package com.fincons.pgd.services.implementations;
 
 import static com.fincons.pgd.utilities.DelegaMapper.buildDelegaDto;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
+import com.fincons.pgd.models.Scenario;
+import com.fincons.pgd.models.StatoDelega;
+import com.fincons.pgd.models.TipoDelegato;
+import com.fincons.pgd.models.enums.StatiDelega;
 import org.springframework.dao.OptimisticLockingFailureException;
 import org.springframework.stereotype.Service;
 
@@ -24,14 +29,25 @@ public class DelegaImpl implements IDelegaServices {
 	
 	private final IDelegaRepository utR;
 
-	public void create(DelegaReq req) throws IllegalArgumentException,	OptimisticLockingFailureException, PGDException{
+	public String create(DelegaReq req) throws IllegalArgumentException,	OptimisticLockingFailureException, PGDException{
 		Delega delega = new Delega();
-		
+        delega.setDataCreazione(LocalDateTime.now());
+        delega.setDataUltimoAggiornamento(LocalDateTime.now());
 
-		
-		utR.save(delega);
-		
-	}
+        Scenario scenario = null;
+
+        StatoDelega stato = null;
+
+        TipoDelegato tipoDelegato = null;
+
+        delega.setScenario(scenario);
+        delega.setStatoCorrente(null);
+        delega.setTipoDelegato(tipoDelegato);
+
+        Delega save = utR.save(delega);
+
+        return save.getCodiceUnivocoDelega();
+    }
 
 	@Override
 	public List<DelegaDTO> list() throws Exception {
